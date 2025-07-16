@@ -3,6 +3,7 @@
   padding: 0;
   background: #0e0e10;
 }
+/*This is the top bar with logo and other things  */
 .bar {
   display: flex;
   /* justify-content: center; */
@@ -36,7 +37,7 @@
 .home:hover {
   text-decoration: underline;
   color: white;
-  font-weight:600;
+  font-weight: 600;
 }
 .why {
   color: white;
@@ -47,19 +48,18 @@
 .why:hover {
   text-decoration: underline;
   color: white;
-  font-weight:600;
+  font-weight: 600;
 }
 .Contact {
   color: white;
   text-decoration: none;
   margin-right: 2rem;
   font-family: sans-serif;
-  
 }
 .Contact:hover {
   text-decoration: underline;
   color: white;
-  font-weight:600;
+  font-weight: 600;
 }
 .AboutMe {
   color: white;
@@ -70,7 +70,7 @@
 .AboutMe:hover {
   text-decoration: underline;
   color: white;
-  font-weight:600;
+  font-weight: 600;
 }
 .MyProjects {
   color: white;
@@ -81,8 +81,10 @@
 .MyProjects:hover {
   text-decoration: underline;
   color: white;
-  font-weight:600;
+  font-weight: 600;
 }
+/* Here the bar ends */
+/* Down below is the first section */
 .container {
   background: url("abstract-black-liquid-drops-background3d-600nw-1021207984.jpg")
     no-repeat center center/cover;
@@ -145,6 +147,7 @@
   border-radius: 2rem;
   height: 100%;
 }
+/* here is section 2 with "How a good website can make you sucessful?" */
 .formate {
   margin: 1rem 0 0 0;
   color: white;
@@ -184,21 +187,21 @@
   height: 60vh;
   background: white;
   margin: 12px 0 0 1rem;
-  z-index: 1;
+  /* z-index: 1; */
   border-radius: 26rem;
 }
 .layer2 {
   width: 16vw;
   height: 15rem;
-  background: black;
-  z-index: 2;
+  background:url("7468-removebg-preview.png") no-repeat;
+  /* z-index: 2; */
   margin: -25rem 0 0 53px;
   border-radius: 22rem;
 }
 .layer3 {
-  background: url("portrait-satisfied-businessman-removebg-preview.png"),
+  background: url("portrait-satisfied-businessman-removebg-preview.png")
     no-repeat;
-  z-index: 3;
+  /* z-index: 3; */
   height: 51vh;
   width: 44vw;
   margin: 1rem 0 0 -12rem;
@@ -211,20 +214,42 @@
   border-radius: 12rem;
   margin: -1rem 0 0px 102px;
 }
-.heading{
+.box {  /*This is line moving b/w my project and How a good website can make you sucessful? */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 99vw;
+}
+.box1 {
+  height: 2px;
+  width: 19rem;
+  border-radius: 19rem;
+  background: white;
+  position: relative;
+  animation: moving 10s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }}
+/* My project section */
+.heading {
   color: white;
   font-family: sans-serif;
   font-size: 3rem;
-  font-weight:600;
+  font-weight: 600;
   margin: 1rem 0 0 2rem;
 }
-.cards{
-display: flex;
+.cards {
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin: 2rem;
 }
-.card{
+.card {
   color: white;
   font-family: sans-serif;
   border: 2px solid white;
@@ -235,13 +260,13 @@ display: flex;
   display: flex;
   flex-direction: column;
 }
-.footer-content{
+.footer-content {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
- background: #000;
- font-size: 1.2rem;
- height: 10vh;
- width: 100vw; 
+  background: #000;
+  font-size: 1.2rem;
+  height: 10vh;
+  width: 100vw;
 }
