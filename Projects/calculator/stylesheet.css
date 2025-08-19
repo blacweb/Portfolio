@@ -66,7 +66,71 @@ body {
     border: none;
     transition: 0.2s ease-in;
 }
+.btn2{
+    background: none;
+    text-decoration: none;
+    color: aliceblue;
+  background: #211f1f;
+    border-radius: 60px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 10px;
+    font-size: larger;
+    border: none;
+    transition: 0.2s ease-in;
+}
+#btn0{
+    background: none;
+    text-decoration: none;
+    color: aliceblue;
+  background: #211f1f;
+    border-radius: 60px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 10px;
+    font-size: larger;
+    border: none;
+    transition: 0.2s ease-in;
+}
 .btn_op{
+    background: none;
+    text-decoration: none;
+    color: aliceblue;
+  background: #d17c1b;
+    border-radius: 60px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 10px;
+    font-size: larger;
+    border: none;
+    transition: 0.2s ease-in;
+}
+.btn_ac{
+    background: none;
+    text-decoration: none;
+    color: aliceblue;
+  background: #d17c1b;
+    border-radius: 60px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 10px;
+    font-size: larger;
+    border: none;
+    transition: 0.2s ease-in;
+}
+.btn_clear{
     background: none;
     text-decoration: none;
     color: aliceblue;

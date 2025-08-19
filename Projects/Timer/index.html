@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timmer">
+        <div class="display">
+   <p id="font" class="hour">00</p>
+   <p id="font"> : </p>
+   <p id="font" class="min">00</p>
+   <p id="font"> : </p>
+   <p id="font" class="sec">00</p>
+   <p id="font"> . </p>
+   <p id="font" class="miliSec">00</p></div>
+   <div class="btn">
+
+       <button class="start" onclick="start()">Start</button>
+       <audio src="alarm-clock-90867.mp3" id="audio" preload="auto"></audio>
+       <button class="stop">Stop</button>
+       <button class="reset">reset</button></div>
+   </div>
+    <script src="index.js"></script>
+</body>
+</html>

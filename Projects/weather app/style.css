@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background: url("mount-fuji-2297961_1280.jpg") no-repeat center center fixed; */
+}
+body {
+    background: url("mount-fuji-2297961_1280.jpg") no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    height: 57vh;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.5px);
+    background-color: hsla(0, 0%, 5%, 0.15);
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+.heading{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.box1{
+  height: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cityInput{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+#check-btn{
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.1s ease;
+    /* overflow: hidden; */
+}
+#check-btn:hover{
+    background-color: black;
+    color: #fff;
+}
+#weatherDetails{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+#error{
+    color: rgb(53, 0, 0);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}

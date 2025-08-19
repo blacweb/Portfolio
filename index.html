@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>https://portfolio.com</title>
     <link rel="stylesheet" href="Style.css">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
+    <script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <!-- <h1>How are </h1> -->
     <header>
         <div class="bar">
             <a href="index.html" class="logo">
@@ -18,81 +23,126 @@
                 </h1>
             </a>
             <a href="index.html" class="home">Home</a>
-            <a href="" class="MyProjects">My Projects</a>
-            <a href="" class="AboutMe">About Me</a>
-            <a href="" class="Contact">Contact</a>
-            <a href="" class="why">Why Chose me</a>
+            <p class="MyProjects">My Projects</p>
+            <a href="resume.html" class="resume">My Resume</a>
+            <a href="contact.html" class="Contact">Contact</a>
+            <button class="E-mail">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
+                target="_blank" class="why">
+                Email me </a><i class="fa-solid fa-envelope" style="background-color: white"></i>
+            </button>
+            
+            
         </div>
     </header>
     <main>
-        <secttion>
-            <div class="alpha">
-                <div class="container">
-                    <div class="alpha">
-                        <h1 class="heading">Biuld High-Performance
-                            websites with me that will covert visitors into customers
-                        </h1>
-                        <p class="description">I am a web developer with a passion for creating high-performance
-                            websites that not only look great but also convert visitors into customers. Let's work
-                            together to build something amazing!</p>
-                        <button class="get-ready">Let's get Started →</button>
+        <secttion >
+            <div class="container">
+                <div class="alpha">
+                    <h1 class="heading">Biuld High-Performance
+                        websites with me that will convert visitors into customers
+                    </h1>
+                    <p class="description">I am a web developer with a passion for creating high-performance
+                        websites that not only look great but also convert visitors into customers. Let's work
+                        together to build something amazing!</p>
+                        <a style="text-decoration: none;" href="contact.html">
+                            <button class="get-ready">Let's get Started →</button>
+                        </a> 
                     </div>
-                </div>
-                </section>
-                <section class="Future">
-                    <div class="write">
-                        <h1 class="H">
-                            How a good website can make you sucessful?
-                        </h1>
-                        <p class="formate">In today’s digital world, your website is often the first impression
-                            potential customers have of your business. A professional, fast, and well-designed site not
-                            only builds trust but also works for you 24/7 — showcasing your services, answering
-                            questions, and turning visitors into paying clients. Every year, trillions of dollars are
-                            spent online and businesses with a strong web presence are the ones taking the biggest
-                            share. Whether you're a startup, freelancer, or established brand, going online isn't just
-                            about visibility it's about tapping into a massive stream of potential revenue. Let me help
-                            you build a site that reflects your brand, attracts your ideal audience, and helps you claim
-                            your share of the digital economy.
-
-                        </p>
-                    </div>
-                    <div class="layers">
-                        <div class="layer1">
-                        </div>
-                        <div class="layer2">
-                        </div>
-                        <div class="layer3">
-                        </div>
-                        <div class="layer4">
-                        </div>
-                    </div>
-                </section>
-                <article>
-                    <div class="box">
-                        <div class="box1"></div>
-                        <div class="box1"></div>
-                        <div class="box1"></div>
-                        <div class="box1"></div>
-                    </div>
-                </article>
-                <section class="Myprojects">
-                    <h1 class="heading">My Projects</h1>
+                <model-viewer class="model" src="./twelve_the_robot_low_poly.glb" alt="My 3D Model" autoplay autoplay
+                    animation-name="Sitting" style="width:300px; height:500px;background-color: black;">
+                </model-viewer>
+            </div>
+            <section >
+                <h1 style="font-size: 2.5rem; margin-left: 3rem;" class="tech_heading">Languages</h1>
+                <div class="lang1">
+                    <i class="fa-brands fa-html5" style="color: #b10f0f;height: 4rem;width: 5rem; font-weight: 600; 
+                    font-size: 2rem;"> HTML</i>
+                    <i class="fa-brands fa-css3" style="color: #74C0FC;font-size: 2rem;"> CSS</i>
+                    <i class="fa-brands fa-js" style="color: #f5cc37;font-size: 2rem;" > JavaScript</i>
+                    <i class="fa-brands fa-node" style="color: rgb(0, 72, 0);font-size: 2rem;"> Node JS</i></div>
+                  <div class="lang2"><i class="fa-brands fa-react" style="color: rgb(3, 75, 122);font-size: 2rem;"> React Js</i>
+                    <p style="color: white;font-size: 2rem;"><img src="MongoDB.png" alt="img" style="height: 4rem;">MongoDB</p>
+                    <p style="color: rgb(50, 111, 168);font-size: 2rem;"><img src="MySQL.png" alt="img" style="height: 4rem;">MySQL</p>
+                </div> 
+            </section>
+                <section class="Myprojects" >
+                    <h1 class="Projects">Projects<img src="man_15258650.png" alt="Img" height="80px"> </h1>
                     <div class="cards">
                         <div class="card">
-                            <h2>Project 1</h2>
-                            <p>Description of project 1.</p>
-                            <a href="Projects/calculator/index.html">this projects</a>
+                            <div class="details">
+                                <h2>Weather App</h2> 
+                               <p class="des">A simple weather App with Weather API</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/weather app/index.html">Click here</a>
+                            </div>
                         </div>
                         <div class="card">
-                            <h2>Project 2</h2>
-                            <p>Description of project 2.</p>
+                                  <div class="details">
+                                <h2>To Do List</h2> 
+                               <p class="des">A simple To do App</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/To Do List/index.html">Click here</a>
+                            </div>
                         </div>
                         <div class="card">
-                            <h2>Project 3</h2>
-                            <p>Description of project 3.</p>
+                                    <div class="details">
+                                <h2>Fun Fact Generator</h2> 
+                               <p class="des">A Fact Generator using API</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/Fun fact generator/index.html">Click here</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                                    <div class="details">
+                                <h2>Digital clock & timmer</h2> 
+                               <p class="des">An app that gives you both a clock and a timmer</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/Timer/index.html">Click here</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                                     <div class="details">
+                                <h2>Calculator</h2> 
+                               <p class="des">A calculator app with all modern features</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/calculator/index.html">Click here</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                                      <div class="details">
+                                <h2>Amazone Clone</h2> 
+                               <p class="des">clone of a worlds #1 e-commerce platform</p>
+                               <div class="tech">
+                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
+                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
+                               </div>
+                               <a class="link" href="Projects/Timer/index.html">Click here</a>
+                            </div>
                         </div>
                     </div>
-                </section>
+                <!-- </section>
                 <section class="about">
                     <h1 class="heading">About Me</h1>
                     <p class="formate">I'm a dedicated Full Stack Web Developer with a strong command of both front-end
@@ -137,13 +187,16 @@
 
                         🤝 Clear communication:<br>
                         I keep things transparent, timely, and client-focused every step of the way.<br></p>
-                </section>
+                </section>-->
     </main>
     <footer>
         <div class="footer-content">
-            <p>&copy; 2023 Codify. All rights reserved.&copy;</p>
-
-    </footer>
+            <div class="social">
+                <a href="" class="linkdin"><i class="fa-brands fa-square-linkedin" style="background-color: black;"></i></a>
+            </div>
+            <p class="copy">&copy; Codify All rights reserved. Since 2023</p>
+        </div>
+            </footer>
 </body>
 
-</html>
+</html> 

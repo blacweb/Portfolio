@@ -10,8 +10,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: #0e0e10;
-  padding: 1rem;
+  padding-left: 2rem;
   flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 .logo {
   display: flex;
@@ -31,24 +35,43 @@
   margin-right: 2rem;
   font: 600;
   /* font-size: 2rem; */
-  transition: text-decoration 1s ease-out;
+  transition: t
+  ext-decoration 1s ease-out;
   font-family: sans-serif;
 }
 .home:hover {
   text-decoration: underline;
   color: white;
   font-weight: 600;
+box-shadow: 0px 0px 100px rgba(5, 230, 255, 0.6);
+background:none;
+
+
 }
-.why {
-  color: white;
+.why{
+  color: black;
+  background: white;
   text-decoration: none;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   font-family: sans-serif;
+  font-weight: 600;
 }
-.why:hover {
-  text-decoration: underline;
+/* .why:hover { */
+  /* text-decoration: underline;
   color: white;
   font-weight: 600;
+} */
+.E-mail{
+  height: 2rem;
+  width: 7rem;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  margin-right: 4rem;
 }
 .Contact {
   color: white;
@@ -61,13 +84,13 @@
   color: white;
   font-weight: 600;
 }
-.AboutMe {
+.resume {
   color: white;
   text-decoration: none;
   margin-right: 2rem;
   font-family: sans-serif;
 }
-.AboutMe:hover {
+.resume:hover {
   text-decoration: underline;
   color: white;
   font-weight: 600;
@@ -77,24 +100,32 @@
   text-decoration: none;
   margin-right: 2rem;
   font-family: sans-serif;
+  cursor: pointer;
+  outline: none;
 }
 .MyProjects:hover {
   text-decoration: underline;
   color: white;
   font-weight: 600;
+  cursor: pointer;
 }
 /* Here the bar ends */
 /* Down below is the first section */
 .container {
-  background: url("abstract-black-liquid-drops-background3d-600nw-1021207984.jpg")
-    no-repeat center center/cover;
-  height: 25rem;
-  width: 90vw;
+  background: black;
+  height: 80vh;
+  width:85vw;
   border-radius: 2rem;
-  margin: 2rem auto;
+  margin: 8rem auto;
   display: flex;
   justify-content: left;
-  flex-direction: column;
+  flex-direction: row;
+      transform: translateY(100px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
+
   .heading {
     color: white;
     font-size: 2.5rem;
@@ -102,9 +133,15 @@
     width: 60%;
     background: none;
     text-align: left;
-    padding: 2rem 0 0 2rem;
+    padding: 2rem 0 0 0;
     border-radius: 1rem;
     font-family: sans-serif;
+  }
+  .model{
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    /* margin-right: rem; */
+    
   }
   .description {
     color: white;
@@ -129,144 +166,223 @@
   cursor: pointer;
   margin-left: 2rem;
   font-family: sans-serif;
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
   font-weight: 300;
+  text-decoration: none;
 }
 .get-ready:hover {
   background-color: #fcfcff;
   color: rgb(0, 0, 0);
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 .alpha {
   background: rgba(0, 0, 0, 0.5);
   display: inline;
-  border-radius: 2rem;
-  height: 100%;
-}
-/* here is section 2 with "How a good website can make you sucessful?" */
-.formate {
-  margin: 1rem 0 0 0;
-  color: white;
-  font-family: sans-serif;
-  line-height: 1.5;
-  font-weight: 100;
-}
-.H {
-  font-size: 3rem;
-  color: white;
-  font-family: sans-serif;
-  line-height: normal;
-}
-.write {
-  margin: 15rem 0 0 0;
-  position: relative;
-  width: 50vw;
-  left: 45vw;
-}
-.Future {
+  border-radius: 4rem;
+  /* height: 100%; */
+  width: 70%;
+  margin-top: 4rem;
+  padding-left: 7rem;
+  text-align: left;
   /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  justify-content: center;
-  width: 100vw;
-  height: 70vh;
-  margin: 0 0 0 2rem;
 }
-.layers {
-  z-index: relative;
-  height: 9vh;
-  position: relative;
-  left: 7rem;
+.tech_heading{
+  color: white;
+  font-family: sans-serif;
+       transform: translateY(50px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
 }
-.layer1 {
-  width: 25vw;
-  height: 60vh;
-  background: white;
-  margin: 12px 0 0 1rem;
-  /* z-index: 1; */
-  border-radius: 26rem;
-}
-.layer2 {
-  width: 16vw;
-  height: 15rem;
-  background:url("7468-removebg-preview.png") no-repeat;
-  /* z-index: 2; */
-  margin: -25rem 0 0 53px;
-  border-radius: 22rem;
-}
-.layer3 {
-  background: url("portrait-satisfied-businessman-removebg-preview.png")
-    no-repeat;
-  /* z-index: 3; */
-  height: 51vh;
-  width: 44vw;
-  margin: 1rem 0 0 -12rem;
-}
-.layer4 {
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 4;
-  height: 62vh;
-  width: 33vw;
-  border-radius: 12rem;
-  margin: -1rem 0 0px 102px;
-}
-.box {  /*This is line moving b/w my project and How a good website can make you sucessful? */
+.lang1{
+  width: 70vw;
+  height: 20vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 99vw;
+  justify-content: space-between;
+  /* align-items: space-evenly; */
+  margin-left: 7rem;
+  margin-top: 4rem;
+    opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
 }
-.box1 {
-  height: 2px;
-  width: 19rem;
-  border-radius: 19rem;
-  background: white;
-  position: relative;
-  animation: moving 10s linear infinite;
+.lang2{
+  width: 70vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: space-evenly; */
+  margin-left: 7rem;
+  margin-top: 2rem;
+       transform: translateX(50px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
 }
-@keyframes moving {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }}
-/* My project section */
 .heading {
+
   color: white;
   font-family: sans-serif;
   font-size: 3rem;
   font-weight: 600;
   margin: 1rem 0 0 2rem;
 }
+.Projects{
+  margin-top: 1rem;
+  color: white;
+  font-family: sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin:8rem 0 0 2rem;
+   opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
+}
+.details{
+  width: 80%;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 2rem;
+  margin: 5rem;
+}
+.des{
+  margin-top: 1rem;
+  font-family: sans-serif;
 }
 .card {
   color: white;
   font-family: sans-serif;
   border: 2px solid white;
   border-radius: 10px;
-  width: 20rem;
+  width: 23rem;
   height: 20rem;
   margin: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.html{
+  margin: 1rem 0 0 0;
+  height: 1.5rem;
+  background: rgb(127, 0, 0);
+  font-family: sans-serif;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.css{
+  margin-top: 1rem;
+  height: 1.5rem;
+  background: rgb(5, 91, 133);
+  font-family: sans-serif;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.JS{
+  margin-top: 1rem;
+  height: 1.5rem;
+  background: rgb(209, 203, 21);
+  font-family: sans-serif;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tech{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center;  */
+  width: 100%;
+  flex-direction: row;
+}
+.link{
+  margin-top: 1rem;
+  text-decoration: none;
+    font-weight: 600;
+      width: 7rem;
+      height: 1.5rem;
+      background: white;
+      color: black;
+      font-family: sans-serif;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }
 .footer-content {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-top: 10rem;
   background: #000;
   font-size: 1.2rem;
-  height: 10vh;
-  width: 100vw;
+  height: 20vh;
+  width: 99vw;
 }
+.copy{
+  background: #000;
+  width: 25rem;
+  font-family: sans-serif;
+  color: white;
+  font-size: .7rem;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+
+}
+.linkdin{
+    background: #000;
+    color: white;
+    /* height: 5rem; */
+    font-size: 2rem;
+    margin-top: 8rem;
+}
+.card{
+      display: flex;
+      /* align-items: center; */
+      /* justify-content: center; */
+      flex-direction: column;
+      /* font-size: 2rem; */
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
+    }
+.show {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }

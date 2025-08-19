@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.logo{
+    /* height: 15rem; */
+    margin-top: 1rem;
+    width: 17rem;
+}
+.options{
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    height: 2vh;
+}
+.Home{
+    text-decoration: none;
+    color: black;
+    font-weight:600;
+    font-family: sans-serif;
+    transition: 1s ease-in linear ;
+    
+}
+.Home:hover{
+    text-decoration: underline;
+    font-weight: 800;
+}
+.about{
+    text-decoration: none;
+    color: black;
+    font-weight:600;
+    font-family: sans-serif;
+    
+}
+.about:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+.contact{
+    text-decoration: none;
+    color: black;
+    font-weight:600;
+    font-family: sans-serif;
+    
+}
+.contact:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+.blog{
+    text-decoration: none;
+    color: black;
+    font-weight:600;
+    font-family: sans-serif;
+    
+}
+.blog:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+.log_in{
+    text-decoration: none;
+    color: rgb(222, 120, 11);
+    font-weight:200;
+    font-family: sans-serif;
+    
+}
+/* .log_in:hover{
+    text-decoration: underline;
+    font-weight: 900;
+} */
+ .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(243, 143, 37);
+ }
+ .Powered{
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+ }
+ .rights{
+    margin-top: 10px;
+    font-weight: 300;
+ }
