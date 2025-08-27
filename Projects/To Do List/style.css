@@ -112,6 +112,7 @@ width: 100vw;
     margin: 2rem 0 1rem 0;
     display: flex;
     align-items: center;
+    
 
 
 }
@@ -126,7 +127,7 @@ width: 100vw;
 
 .outer {
     display: flex;
-    width: 70vw;
+    width: 75vw;
     justify-content: space-between;
 }
 
@@ -206,4 +207,113 @@ width: 100vw;
     background: #b7b1b1;
     font-size: 1rem;
     font-family: sans-serif;
+}
+.funcs{
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:1350px){
+.head{
+    width: 95vw;
+margin-left: .5rem; 
+}
+.menu {
+    height: 1.5rem;
+    width: 2rem;
+}
+.current_date {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+.read {
+    font: 300;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin: 1rem 0 0 1rem;
+    width: 40vw;
+   
+}
+.task {
+    height: 4rem;
+    width: 75vw;
+    background: white;
+    /* padding: 1rem; */
+    border-radius: 10px;
+    margin: 2rem 0 1rem 0;
+}
+.due_date{
+    background: rgb(185, 4, 4);
+    font-weight: 600;
+    margin: 0 0 0 1rem;
+    /* height: 1.9rem; */
+    width: 10rem;
+    font-size: .7rem;
+}
+.dates{
+width: 7rem;
+font-size: .7rem;
+}
+.taskbox {
+    background: #e2dddd;
+    /* height: 15vh; */
+    /* padding: 1rem; */
+    width: 95vw;
+    margin: 2rem 0 0 1rem;
+}
+.task {
+    height: 6rem;
+    width: 95%;
+    background: white;
+    /* padding: 1rem; */
+    border-radius: 10px;
+    margin: 1rem 0 1rem 0;
+}
+.creat {
+    height: 2rem;
+    width: 9rem;
+    margin: 1rem 0 0 2rem;
+}
+.current_date {
+    width: 80vw;
+    margin: 1rem 0 0 1rem;
+}
+.complete {
+    width: 3rem;
+    height: 2rem;
+    margin: 0 0 0 1rem;
+}
+.outer {
+    display: flex;
+    width: 85vw;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 1rem;
+    width: 70vw;
+}
+.funcs{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0 1rem 18rem;
+
+} 
+.complete {
+    width: 8rem;
+    height: 2rem;
+    font-size: .7rem;
+}
+.delet{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 }

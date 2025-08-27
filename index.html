@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>https://portfolio.com</title>
-    <link rel="stylesheet" href="Style.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="./styles/Style.css">
+    <script defer src="./JS files/index.js"></script>
     <script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -17,6 +17,7 @@
     <!-- <h1>How are </h1> -->
     <header>
         <div class="bar">
+                <button class="menu"><i class="fa-solid fa-bars" style="background-color: azure;"></i></button>
             <a href="index.html" class="logo">
                 <h1 class="logo">
                     <\>Codify
@@ -24,8 +25,8 @@
             </a>
             <a href="index.html" class="home">Home</a>
             <p class="MyProjects">My Projects</p>
-            <a href="resume.html" class="resume">My Resume</a>
-            <a href="contact.html" class="Contact">Contact</a>
+            <a href="./others/resume.html" class="resume">My Resume</a>
+            <a href="./others/contact.html" class="Contact">Contact</a>
             <button class="E-mail">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
                 target="_blank" class="why">
@@ -39,7 +40,7 @@
         <secttion >
             <div class="container">
                 <div class="alpha">
-                    <h1 class="heading">Biuld High-Performance
+                    <h1 class="heading1">Biuld High-Performance
                         websites with me that will convert visitors into customers
                     </h1>
                     <p class="description">I am a web developer with a passion for creating high-performance
@@ -49,27 +50,30 @@
                             <button class="get-ready">Let's get Started →</button>
                         </a> 
                     </div>
-                <model-viewer class="model" src="./twelve_the_robot_low_poly.glb" alt="My 3D Model" autoplay autoplay
+                <model-viewer class="model" src="./media/twelve_the_robot_low_poly.glb" alt="My 3D Model" autoplay autoplay
                     animation-name="Sitting" style="width:300px; height:500px;background-color: black;">
                 </model-viewer>
             </div>
             <section >
-                <h1 style="font-size: 2.5rem; margin-left: 3rem;" class="tech_heading">Languages</h1>
+                <h1 class="tech_heading">Languages</h1>
                 <div class="lang1">
-                    <i class="fa-brands fa-html5" style="color: #b10f0f;height: 4rem;width: 5rem; font-weight: 600; 
-                    font-size: 2rem;"> HTML</i>
-                    <i class="fa-brands fa-css3" style="color: #74C0FC;font-size: 2rem;"> CSS</i>
-                    <i class="fa-brands fa-js" style="color: #f5cc37;font-size: 2rem;" > JavaScript</i>
-                    <i class="fa-brands fa-node" style="color: rgb(0, 72, 0);font-size: 2rem;"> Node JS</i></div>
-                  <div class="lang2"><i class="fa-brands fa-react" style="color: rgb(3, 75, 122);font-size: 2rem;"> React Js</i>
-                    <p style="color: white;font-size: 2rem;"><img src="MongoDB.png" alt="img" style="height: 4rem;">MongoDB</p>
-                    <p style="color: rgb(50, 111, 168);font-size: 2rem;"><img src="MySQL.png" alt="img" style="height: 4rem;">MySQL</p>
+                    <i class="fa-brands fa-html5" style="color: #b10f0f;"> HTML</i>
+                    <i class="fa-brands fa-css3" style="color: #74C0FC;"> CSS</i>
+                    <i class="fa-brands fa-js" style="color: #f5cc37;" > JavaScript</i>
+                </div>
+                <div class="lang2"><i class="fa-brands fa-react" style="color: rgb(3, 75, 122);"> React Js</i>
+                    <i class="fa-brands fa-node" style="color: rgb(0, 72, 0);"> Node JS</i>
+                    <p style="color: white;"><img src="./media/MongoDB.png" alt="img" style="height: 4rem;">MongoDB</p>
                 </div> 
+                <div class="lang3">
+                    <p style="color: rgb(50, 111, 168);"><img src="./media/MySQL.png" alt="img" style="height: 4rem;">MySQL</p>
+                </div>
             </section>
                 <section class="Myprojects" >
-                    <h1 class="Projects">Projects<img src="man_15258650.png" alt="Img" height="80px"> </h1>
+                    <h1 class="Projects">Projects<img src="./media/man_15258650.png" alt="Img" height="80px"> </h1>
                     <div class="cards">
                         <div class="card">
+                            <img class="project_img" src="./media/weahter_app_preview.png" alt="img">
                             <div class="details">
                                 <h2>Weather App</h2> 
                                <p class="des">A simple weather App with Weather API</p>
@@ -78,10 +82,11 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/weather app/index.html">Click here</a>
+                               <a class="link" href="Projects/weather app/index.html">check it ➡️</a>
                             </div>
                         </div>
                         <div class="card">
+                              <img class="project_img" src="./Projects/To Do List/to do list preview.png" alt="img">
                                   <div class="details">
                                 <h2>To Do List</h2> 
                                <p class="des">A simple To do App</p>
@@ -90,7 +95,7 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/To Do List/index.html">Click here</a>
+                               <a class="link" href="Projects/To Do List/index.html">check it ➡️</a>
                             </div>
                         </div>
                         <div class="card">
@@ -102,7 +107,7 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/Fun fact generator/index.html">Click here</a>
+                               <a class="link" href="Projects/Fun fact generator/index.html">check it ➡️</a>
                             </div>
                         </div>
                         <div class="card">
@@ -114,7 +119,7 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/Timer/index.html">Click here</a>
+                               <a class="link" href="Projects/Timer/index.html">check it ➡️</a>
                             </div>
                         </div>
                         <div class="card">
@@ -126,7 +131,7 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/calculator/index.html">Click here</a>
+                               <a class="link" href="Projects/calculator/index.html">check it ➡️</a>
                             </div>
                         </div>
                         <div class="card">
@@ -138,12 +143,12 @@
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
-                               <a class="link" href="Projects/Timer/index.html">Click here</a>
+                               <a class="link" href="Projects/Timer/index.html">check it ➡️</a>
                             </div>
                         </div>
                     </div>
-                <!-- </section>
-                <section class="about">
+                </section>
+                <!--<section class="about">
                     <h1 class="heading">About Me</h1>
                     <p class="formate">I'm a dedicated Full Stack Web Developer with a strong command of both front-end
                         and back-end technologies. I specialize in creating fast, scalable, and intuitive web

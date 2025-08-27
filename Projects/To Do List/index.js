@@ -104,6 +104,7 @@ function Creat(){
     const complete=document.createElement("button");
     const delet=document.createElement("button");
     const icon=document.createElement("i");
+    const funcs=document.createElement("div");
 
  task.classList.add("task");
  outer.classList.add("outer");
@@ -115,6 +116,7 @@ function Creat(){
  complete.classList.add("complete");
  delet.classList.add("delet");
  icon.classList.add("fa-solid" ,"fa-trash");
+ funcs.classList.add("funcs");
 
 series.textContent="➡️";
  read.type="text";
@@ -130,11 +132,14 @@ complete.textContent="Completed ✅";
  outer.appendChild(main);
  main.appendChild(series);
  main.appendChild(read);
+ main.appendChild(delet);
  outer.appendChild(due_date);
  due_date.appendChild(dates);
  outer.appendChild(complete);
- outer.appendChild(delet);
+ outer.appendChild(funcs);
  delet.appendChild(icon);
+ funcs.appendChild(due_date);
+ funcs.appendChild(complete);
 
 
  delet.addEventListener("click",()=> task.style.display="none");
@@ -147,7 +152,7 @@ complete.textContent="Completed ✅";
     due_date.style.display="none";
     series.textContent="✅";
     complete.style.display="none";
-
+  
 });
 
 }

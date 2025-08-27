@@ -17,6 +17,9 @@
   z-index: 1000;
   width: 100%;
 }
+.menu{
+  display: none;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -43,7 +46,7 @@
   text-decoration: underline;
   color: white;
   font-weight: 600;
-box-shadow: 0px 0px 100px rgba(5, 230, 255, 0.6);
+box-shadow: 0px 0px 100px rgba(130, 5, 175, 0.6);
 background:none;
 
 
@@ -125,8 +128,8 @@ background:none;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
                   filter 0.8s ease-out;
-
-  .heading {
+}
+  .heading1 {
     color: white;
     font-size: 2.5rem;
     font-weight: 600;
@@ -155,7 +158,6 @@ background:none;
     font-family: sans-serif;
     margin-top: 1rem;
   }
-}
 .get-ready {
   background-color: #0e0e10;
   color: white;
@@ -185,7 +187,7 @@ background:none;
   display: inline;
   border-radius: 4rem;
   /* height: 100%; */
-  width: 70%;
+  width: 100%;
   margin-top: 4rem;
   padding-left: 7rem;
   text-align: left;
@@ -209,7 +211,7 @@ background:none;
   margin-left: 7rem;
   margin-top: 4rem;
     opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-70px);
       transition: all 0.8s ease-out;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
@@ -223,7 +225,21 @@ background:none;
   /* align-items: space-evenly; */
   margin-left: 7rem;
   margin-top: 2rem;
-       transform: translateX(50px);
+       transform: translateX(70px);
+      transition: all 0.8s ease-out;
+       transition: opacity 0.8s ease-out, 
+                  transform 0.8s ease-out, 
+                  filter 0.8s ease-out;
+}
+.lang3{
+  width: 70vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: space-evenly; */
+  margin-left: 7rem;
+  margin-top: 2rem;
+       transform: translateX(-70px);
       transition: all 0.8s ease-out;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
@@ -253,6 +269,8 @@ background:none;
 }
 .details{
   width: 80%;
+  height: 40%;
+  margin-top: .5rem;
 }
 .cards {
   display: flex;
@@ -264,13 +282,18 @@ background:none;
   margin-top: 1rem;
   font-family: sans-serif;
 }
+.project_img{
+  width: 85%;
+  height: 45%;
+  border-radius: 10px;
+}
 .card {
   color: white;
   font-family: sans-serif;
   border: 2px solid white;
   border-radius: 10px;
   width: 23rem;
-  height: 20rem;
+  height: 23rem;
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -351,7 +374,7 @@ background:none;
 }
 .copy{
   background: #000;
-  width: 25rem;
+  /* width: 25rem; */
   font-family: sans-serif;
   color: white;
   font-size: .7rem;
@@ -386,3 +409,120 @@ margin-top: 2rem;
       transform: translateY(0);
       filter: blur(0);
     }
+@media(max-width:650px){
+  .logo{
+    font-size: 2rem;
+  }
+  .home{
+    display: none;
+  }
+ .Contact{
+  display: none;
+ }
+ .resume {
+display: none;
+}
+.MyProjects {
+display: none;
+}
+.container{
+  display: flex;
+  height: 32rem;
+}
+  .heading1 {
+    font-size: 1.5rem;
+    width: 90%;
+    /* height: 20%; */
+    text-align: left;
+    padding: 0;
+    margin-left: -5rem;
+  }
+  .model{
+    height: -1rem;
+    width: 1rem;
+    margin: 0;
+
+  }
+  /* .container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+
+  } */
+  .description{
+    display: none;
+  }
+  .container{
+    width: 85vw;
+    margin-left: 1.2rem;
+  }
+  .get-ready{
+    background: white;
+    color: black;
+    font-family: sans-serif;
+    /* font-weight: 600; */
+    width: 12rem;
+    padding: 0;
+    margin-left: -5rem;
+  }
+  .bar{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+  }
+  .menu{
+    display: flex;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: none;
+    height: 1.3rem;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .E-mail{
+    font-size: .7rem;
+  width: 4rem;
+  }
+  .tech_heading{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .lang1{
+    font-size: 1rem;
+    padding: 0;
+    margin: 1rem;
+    width: 70vw;
+
+  }
+  .lang2{
+    font-size: 1rem;
+    padding: 0;
+     margin: 1rem;
+     width: 70vw;
+
+  }
+  .lang3{
+    font-size: 1rem;
+    padding: 0;
+     margin: 1rem;
+     width: 70vw;
+
+  }
+  .Projects{
+    font-size: 1.5rem;
+  }
+  .cards{
+    margin: 0;
+  }
+  .card{
+    width: 18rem;
+  }
+}

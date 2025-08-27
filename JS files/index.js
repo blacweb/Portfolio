@@ -26,6 +26,7 @@ projects.addEventListener("click",  ()=> {
  const project = document.querySelectorAll(".Projects");
  const lang1 = document.querySelectorAll(".lang1");
  const lang2 = document.querySelectorAll(".lang2");
+ const lang3 = document.querySelectorAll(".lang3");
  const heading = document.querySelectorAll(".tech_heading");
  const hero = document.querySelectorAll(".container");
 
@@ -46,5 +47,6 @@ const observer = new IntersectionObserver(show, options);
 project.forEach(project => observer.observe(project));
 lang1.forEach(project => observer.observe(project));
 lang2.forEach(project => observer.observe(project));
+lang3.forEach(project => observer.observe(project));
 heading.forEach(project => observer.observe(project));
 hero.forEach(project => observer.observe(project));

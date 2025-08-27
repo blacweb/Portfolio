@@ -14,8 +14,8 @@ body {
 .container{
     border: 2px solid #fff;
     border-radius: 2rem;
-    height: 57vh;
-    width: 65vw;
+    height: 55vh;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,8 +34,12 @@ body {
     z-index: 1;
 }
 .heading{
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+}
+.heading2{
+    font-size: 2rem;
+    margin-top: 1rem;
 }
 .box1{
   height: 28%;
@@ -45,13 +49,15 @@ body {
 }
 #cityInput{
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.1rem .1rem .1rem .5rem;
     border-radius: 0.5rem;
     border: none;
     font-size: 2rem;
     margin-bottom: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: transparent;
+    outline: none;
+    color: white;
 }
 #check-btn{
     width: 50%;
@@ -71,23 +77,69 @@ body {
     color: #fff;
 }
 #weatherDetails{
-    height: 70%;
+    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 #error{
     color: rgb(53, 0, 0);
     font-size: 1.5rem;
     margin-top: 1rem;
     text-align: center;
+}
+@media(max-width:1000px){
+    .container{
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    height: 75vh;
+    width: 65vw;
+    font-size: 1.2rem;
+}
+ .heading{
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+}
+.heading2{
+    font-size: 1.4rem;
+     margin-top: 1rem; 
+} 
+.box1{
+  height: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cityInput{
+    width: 85%;
+    height: 50%;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+#check-btn{
+    width: 50%;
+    /* padding: 0.5rem; */
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+}
+#weatherDetails{
+    height: 60%;
+}
+#error{
+    color: rgb(137, 3, 3);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-family: sans-serif;
+}
 }
