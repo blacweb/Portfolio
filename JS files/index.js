@@ -1,7 +1,14 @@
   const projects = document.querySelector('.MyProjects');
+  const menu_projects = document.querySelector('.menu_MyProjects');
 projects.addEventListener("click",  ()=> {
       window.scrollTo({
         top: 1210,
+        behavior: "smooth"
+      });
+    })
+menu_projects.addEventListener("click",  ()=> {
+      window.scrollTo({
+        top: 1320,
         behavior: "smooth"
       });
     })
@@ -50,3 +57,12 @@ lang2.forEach(project => observer.observe(project));
 lang3.forEach(project => observer.observe(project));
 heading.forEach(project => observer.observe(project));
 hero.forEach(project => observer.observe(project));
+function cls(){
+  const close=document.querySelector(".menu_box");
+  close.style.display="none";
+}
+function opn(){
+    const on=document.querySelector(".menu_box");
+  on.style.display="flex";
+}
+

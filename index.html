@@ -14,10 +14,17 @@
 </head>
 
 <body>
-    <!-- <h1>How are </h1> -->
     <header>
+        <!-- This is the navbar of the website -->
         <div class="bar">
-                <button class="menu"><i class="fa-solid fa-bars" style="background-color: azure;"></i></button>
+            <div class="menu_box">
+                     <a href="index.html" class="menu_home">Home</a>
+                       <p class="menu_MyProjects">My Projects</p>
+                  <a href="./others/resume.html" class="menu_resume">My Resume</a>
+            <a href="./others/contact.html" class="menu_Contact">Contact</a>
+            <button onclick="cls()" class="cls_menu">close</button>
+            </div>
+                <button onclick="opn()" class="menu"><i class="fa-solid fa-bars" style="background-color: azure;"></i></button>
             <a href="index.html" class="logo">
                 <h1 class="logo">
                     <\>Codify
@@ -29,7 +36,7 @@
             <a href="./others/contact.html" class="Contact">Contact</a>
             <button class="E-mail">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
-                target="_blank" class="why">
+                target="_blank" class="email">
                 Email me </a><i class="fa-solid fa-envelope" style="background-color: white"></i>
             </button>
             
@@ -37,6 +44,7 @@
         </div>
     </header>
     <main>
+        <!-- Here starts the hero section of the website -->
         <secttion >
             <div class="container">
                 <div class="alpha">
@@ -46,15 +54,17 @@
                     <p class="description">I am a web developer with a passion for creating high-performance
                         websites that not only look great but also convert visitors into customers. Let's work
                         together to build something amazing!</p>
-                        <a style="text-decoration: none;" href="contact.html">
+                        <a class="btn_link" href="./others/contact.html">
                             <button class="get-ready">Let's get Started →</button>
                         </a> 
                     </div>
                 <model-viewer class="model" src="./media/twelve_the_robot_low_poly.glb" alt="My 3D Model" autoplay autoplay
-                    animation-name="Sitting" style="width:300px; height:500px;background-color: black;">
+>              
                 </model-viewer>
             </div>
-            <section >
+        </secttion>
+            <!-- This is the technolgy section which is immediatly after hero section-->
+            <section > 
                 <h1 class="tech_heading">Languages</h1>
                 <div class="lang1">
                     <i class="fa-brands fa-html5" style="color: #b10f0f;"> HTML</i>
@@ -69,15 +79,20 @@
                     <p style="color: rgb(50, 111, 168);"><img src="./media/MySQL.png" alt="img" style="height: 4rem;">MySQL</p>
                 </div>
             </section>
+            <!-- here starts the project section -->
                 <section class="Myprojects" >
                     <h1 class="Projects">Projects<img src="./media/man_15258650.png" alt="Img" height="80px"> </h1>
-                    <div class="cards">
+                    <!-- cards section the main container-->
+                     <div class="cards_container">
+
+                         <div class="cards">
+                             <!-- card # 01 topic: weather App -->
                         <div class="card">
                             <img class="project_img" src="./media/weahter_app_preview.png" alt="img">
                             <div class="details">
-                                <h2>Weather App</h2> 
-                               <p class="des">A simple weather App with Weather API</p>
-                               <div class="tech">
+                                <h2 class="card_heading">Weather App</h2> 
+                                <p class="des">A simple weather App with Weather API</p>
+                                <div class="tech">
                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
@@ -85,11 +100,12 @@
                                <a class="link" href="Projects/weather app/index.html">check it ➡️</a>
                             </div>
                         </div>
+                        <!-- card # 02 topic: To-Do App -->
                         <div class="card">
                               <img class="project_img" src="./Projects/To Do List/to do list preview.png" alt="img">
-                                  <div class="details">
-                                <h2>To Do List</h2> 
-                               <p class="des">A simple To do App</p>
+                              <div class="details">
+                                <h2 class="card_heading">To Do List</h2> 
+                                <p class="des">A simple To do App</p>
                                <div class="tech">
                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
@@ -98,10 +114,12 @@
                                <a class="link" href="Projects/To Do List/index.html">check it ➡️</a>
                             </div>
                         </div>
+                        <!-- card # 03 Fact generator -->
                         <div class="card">
-                                    <div class="details">
-                                <h2>Fun Fact Generator</h2> 
-                               <p class="des">A Fact Generator using API</p>
+                              <img class="project_img" src="./Projects/Fun fact generator/Fact_generator preview.png" alt="img">
+                              <div class="details">
+                                <h2 class="card_heading">Fun Fact Generator</h2> 
+                                <p class="des">A Fact Generator using API</p>
                                <div class="tech">
                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
@@ -110,35 +128,38 @@
                                <a class="link" href="Projects/Fun fact generator/index.html">check it ➡️</a>
                             </div>
                         </div>
-                        <div class="card">
-                                    <div class="details">
-                                <h2>Digital clock & timmer</h2> 
-                               <p class="des">An app that gives you both a clock and a timmer</p>
-                               <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
+                         <!-- card # 04 topic: Timmer & stop watch -->
+                         <div class="card">
+                             <div class="details">
+                                <h2 class="card_heading">Digital clock & timmer</h2> 
+                                <p class="des">An app that gives you both a clock and a timmer</p>
+                                <div class="tech">
+                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
                                </div>
                                <a class="link" href="Projects/Timer/index.html">check it ➡️</a>
                             </div>
                         </div>
+                         <!-- card # 05 topic: Calculator -->
                         <div class="card">
                                      <div class="details">
-                                <h2>Calculator</h2> 
+                                <h2 class="card_heading">Calculator</h2> 
                                <p class="des">A calculator app with all modern features</p>
                                <div class="tech">
                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/calculator/index.html">check it ➡️</a>
+                                </div>
+                                <a class="link" href="Projects/calculator/index.html">check it ➡️</a>
                             </div>
                         </div>
+                        <!-- card # 06 topic:Amazon clone -->
                         <div class="card">
-                                      <div class="details">
-                                <h2>Amazone Clone</h2> 
-                               <p class="des">clone of a worlds #1 e-commerce platform</p>
-                               <div class="tech">
+                            <div class="details">
+                                <h2 class="card_heading">Amazone Clone</h2> 
+                                <p class="des">clone of a worlds #1 e-commerce platform</p>
+                                <div class="tech">
                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
                                    <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
                                    <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
@@ -147,9 +168,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
                 </section>
-                <!--<section class="about">
-                    <h1 class="heading">About Me</h1>
+                <!-- this is commented  -->
+                <section class="about">
+                <!--    <h1 class="heading">About Me</h1>
                     <p class="formate">I'm a dedicated Full Stack Web Developer with a strong command of both front-end
                         and back-end technologies. I specialize in creating fast, scalable, and intuitive web
                         applications that deliver real value to users. My workflow balances clean design with robust
@@ -192,12 +216,13 @@
 
                         🤝 Clear communication:<br>
                         I keep things transparent, timely, and client-focused every step of the way.<br></p>
-                </section>-->
+                    -->
+                    </section>
     </main>
     <footer>
         <div class="footer-content">
             <div class="social">
-                <a href="" class="linkdin"><i class="fa-brands fa-square-linkedin" style="background-color: black;"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="linkdin"><i class="fa-brands fa-square-linkedin" style="background-color: black;"></i></a>
             </div>
             <p class="copy">&copy; Codify All rights reserved. Since 2023</p>
         </div>

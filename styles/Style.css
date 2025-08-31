@@ -4,6 +4,9 @@
   background: #0e0e10;
 }
 /*This is the top bar with logo and other things  */
+html,body{
+  overflow-x: hidden;
+}
 .bar {
   display: flex;
   /* justify-content: center; */
@@ -15,9 +18,12 @@
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: 100%;
+  width: 94vw;
 }
 .menu{
+  display: none;
+}
+.menu_box{
   display: none;
 }
 .logo {
@@ -51,7 +57,7 @@ background:none;
 
 
 }
-.why{
+.email{
   color: black;
   background: white;
   text-decoration: none;
@@ -59,11 +65,7 @@ background:none;
   font-family: sans-serif;
   font-weight: 600;
 }
-/* .why:hover { */
-  /* text-decoration: underline;
-  color: white;
-  font-weight: 600;
-} */
+
 .E-mail{
   height: 2rem;
   width: 7rem;
@@ -76,6 +78,10 @@ background:none;
   border-radius: 5px;
   margin-right: 4rem;
 }
+/* .E-mail:hover{
+  background: #000;
+  color: white;
+} */
 .Contact {
   color: white;
   text-decoration: none;
@@ -86,6 +92,8 @@ background:none;
   text-decoration: underline;
   color: white;
   font-weight: 600;
+box-shadow: 0px 0px 100px rgba(130, 5, 175, 0.6);
+background:none;
 }
 .resume {
   color: white;
@@ -94,9 +102,11 @@ background:none;
   font-family: sans-serif;
 }
 .resume:hover {
-  text-decoration: underline;
+   text-decoration: underline;
   color: white;
   font-weight: 600;
+box-shadow: 0px 0px 100px rgba(130, 5, 175, 0.6);
+background:none;
 }
 .MyProjects {
   color: white;
@@ -110,6 +120,8 @@ background:none;
   text-decoration: underline;
   color: white;
   font-weight: 600;
+box-shadow: 0px 0px 100px rgba(130, 5, 175, 0.6);
+background:none;
   cursor: pointer;
 }
 /* Here the bar ends */
@@ -144,7 +156,10 @@ background:none;
     border-radius: 15px;
     margin-top: 1.5rem;
     /* margin-right: rem; */
-    
+    width: 35%;
+    height: 90%;
+    background: #000;
+    margin: 0 1rem 0 0;
   }
   .description {
     color: white;
@@ -156,7 +171,7 @@ background:none;
     padding: 0.5rem 0 0 2rem;
     border-radius: 1rem;
     font-family: sans-serif;
-    margin-top: 1rem;
+    margin:1rem 0 0 -2rem;
   }
 .get-ready {
   background-color: #0e0e10;
@@ -182,6 +197,9 @@ background:none;
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
+.btn_link{
+  text-decoration: none;
+}
 .alpha {
   background: rgba(0, 0, 0, 0.5);
   display: inline;
@@ -201,6 +219,8 @@ background:none;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
                   filter 0.8s ease-out;
+                  font-size: 2.5rem;
+                  margin-left: 2rem;
 }
 .lang1{
   width: 70vw;
@@ -216,6 +236,7 @@ background:none;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
                   filter 0.8s ease-out;
+                  font-size: 1.7rem;
 }
 .lang2{
   width: 70vw;
@@ -230,6 +251,7 @@ background:none;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
                   filter 0.8s ease-out;
+                      font-size: 1.7rem;
 }
 .lang3{
   width: 70vw;
@@ -244,6 +266,7 @@ background:none;
        transition: opacity 0.8s ease-out, 
                   transform 0.8s ease-out, 
                   filter 0.8s ease-out;
+                      font-size: 1.7rem;
 }
 .heading {
 
@@ -274,9 +297,17 @@ background:none;
 }
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   flex-direction: row;
   margin: 5rem;
+  width: 100vw;
+  /* width: 70vw; */
+}
+.cards_container{
+   display: flex;
+   width: 100vw;
+   align-items: center;
+   justify-content: center;
 }
 .des{
   margin-top: 1rem;
@@ -292,7 +323,7 @@ background:none;
   font-family: sans-serif;
   border: 2px solid white;
   border-radius: 10px;
-  width: 23rem;
+  width: 26%;
   height: 23rem;
   margin: 2rem;
   display: flex;
@@ -370,7 +401,7 @@ background:none;
   background: #000;
   font-size: 1.2rem;
   height: 20vh;
-  width: 99vw;
+  width: 100vw;
 }
 .copy{
   background: #000;
@@ -409,7 +440,10 @@ margin-top: 2rem;
       transform: translateY(0);
       filter: blur(0);
     }
-@media(max-width:650px){
+@media(max-width:600px){
+html,body{
+    overflow-x: hidden;
+  }
   .logo{
     font-size: 2rem;
   }
@@ -427,7 +461,7 @@ display: none;
 }
 .container{
   display: flex;
-  height: 32rem;
+  height: 20rem;
 }
   .heading1 {
     font-size: 1.5rem;
@@ -455,7 +489,8 @@ display: none;
     display: none;
   }
   .container{
-    width: 85vw;
+    width: 90vw;
+    height: 20rem;
     margin-left: 1.2rem;
   }
   .get-ready{
@@ -464,16 +499,18 @@ display: none;
     font-family: sans-serif;
     /* font-weight: 600; */
     width: 12rem;
+    height: 2.5rem;
     padding: 0;
     margin-left: -5rem;
   }
   .bar{
-    width: 100vw;
+    width: 95vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: -1rem;
+    /* position: relative; */
   }
   .menu{
     display: flex;
@@ -486,33 +523,47 @@ display: none;
     width: 2rem;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
   .E-mail{
     font-size: .7rem;
   width: 4rem;
+  padding: 0;
+  margin: 0;
+  }
+    .model{
+ background: #000;
+ height: 10rem;
+ margin: 0;
+ width: 40%;
+    margin: 4rem 2rem 0 0;
+  }
+  .alpha{
+    width: 60%;
   }
   .tech_heading{
     font-size: 1.5rem;
     margin-left: 1rem;
+    margin-top: 1rem;
   }
   .lang1{
     font-size: 1rem;
     padding: 0;
-    margin: 1rem;
+    margin: 2rem;
     width: 70vw;
 
   }
   .lang2{
     font-size: 1rem;
     padding: 0;
-     margin: 1rem;
+     margin: 2rem;
      width: 70vw;
 
   }
   .lang3{
     font-size: 1rem;
     padding: 0;
-     margin: 1rem;
+     margin: 2rem;
      width: 70vw;
 
   }
@@ -520,9 +571,407 @@ display: none;
     font-size: 1.5rem;
   }
   .cards{
-    margin: 0;
+width: 100%;
+align-items: center;
+justify-content: center;
   }
   .card{
-    width: 18rem;
+    width: 100%;
   }
+  .cards_container{
+   display: flex;
+   width: 100vw;
+   align-items: center;
+   justify-content: center;
+}
+  .menu_box{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 8rem;
+  /* color: white; */
+  border: 1px solid white;
+  z-index: 2000;
+  height: 25rem;
+  position: fixed;
+  margin-top: 8rem;
+  margin-left: -1rem;
+   /* transform: translateX(-100%);  */
+  /* transition: transform 0.3s ease;  */
+  display: none;
+
+}
+.menu_home{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_Contact{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_MyProjects{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_resume{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cls_menu{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.cls_menu:hover{
+font-weight: 600;
+}
+
+}
+.extra_cards{
+  display: none;
+}
+@media (min-width:600px) and (max-width:957px){
+  .logo{
+    font-size: 2rem;
+  }
+  .home{
+    display: none;
+  }
+ .Contact{
+  display: none;
+ }
+ .resume {
+display: none;
+}
+.MyProjects {
+display: none;
+}
+.container{
+  display: flex;
+  height: 20rem;
+}
+  .heading1 {
+    font-size: 1.5rem;
+    width: 90%;
+    /* height: 20%; */
+    text-align: left;
+    padding: 0;
+    margin-left: -5rem;
+  }
+  .model{
+    height: -1rem;
+    width: 1rem;
+    margin: 0;
+
+  }
+    .description{
+    display: none;
+  }
+  .container{
+    width: 90vw;
+    height: 20rem;
+    margin-left: 1.2rem;
+  }
+  .get-ready{
+    background: white;
+    color: black;
+    font-family: sans-serif;
+    /* font-weight: 600; */
+    width: 12rem;
+    height: 2.5rem;
+    padding: 0;
+    margin-left: -5rem;
+  }
+  .btn_link{
+    text-decoration: none;
+  }
+  .bar{
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    /* position: relative; */
+  }
+  .menu{
+    display: flex;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: none;
+    height: 1.3rem;
+    width: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .E-mail{
+    font-size: .7rem;
+  width: 4rem;
+  padding: 0;
+  margin: 0;
+  }
+    .model{
+ background: #000;
+ height: 10rem;
+ margin: 0;
+ width: 40%;
+    margin: 4rem 2rem 0 0;
+  }
+  .alpha{
+    width: 60%;
+  }
+  .tech_heading{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .lang1{
+    font-size: 1rem;
+    padding: 0;
+    margin: 2rem;
+    width: 70vw;
+
+  }
+  .lang2{
+    font-size: 1rem;
+    padding: 0;
+     margin: 2rem;
+     width: 70vw;
+
+  }
+  .lang3{
+    font-size: 1rem;
+    padding: 0;
+     margin: 2rem;
+     width: 70vw;
+
+  }
+  .MyProjects {
+display: none;
+}
+.cards{
+  width: 100%;
+  margin: 1rem 0 0 2rem;
+  padding: 0;
+}
+.card{
+  width:38%;
+}
+  .menu_box{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 8rem;
+  /* color: white; */
+  border: 1px solid white;
+  z-index: 2000;
+  height: 25rem;
+  position: fixed;
+  margin-top: 8rem;
+  margin-left: -1rem;
+   /* transform: translateX(-100%);  */
+  /* transition: transform 0.3s ease;  */
+  display: none;
+
+}
+.menu_home{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_Contact{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_MyProjects{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu_resume{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cls_menu{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  /* border: .5px solid white; */
+  width: 100%;
+  height: 20%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+}
+@media  (min-width: 957px) and (max-width: 1130px) {
+  .home{
+    display:none;
+  }
+  .container{
+    width:90vw;
+    height: 21rem;
+  }
+  .alpha{
+    width: 60%;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading1{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .description{
+    font-size: 1rem;
+    margin: 1rem 0 0 6.5rem;
+    padding: 0;
+  }
+  .get-ready{
+    background: white;
+    color: #000;
+    text-decoration: none;
+        font-weight: 300;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+  }
+  .btn_link{
+    display: flex;
+    background: white;
+    text-decoration: none;
+    border-radius: 15px;
+    width: 20rem;
+    font-weight: 300;
+    height: 2rem;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+  .model{
+    background: #000;
+    width: 40%;
+    height: 85%;
+  }
+  .cards{
+    width: 100%;
+  }
+  .card{
+    width: 25%;
+  }
+  .des{
+ font-size: .7rem;
+  }
+  .card_heading{
+    font-size: 1.2rem;
+  }
+   .details{
+    width: 90%;
+    height: 55%;
+   }
+   .project_img{
+    margin-top: 1rem;
+   }
+.html{
+  font-size: .7rem;
+}
+.css{
+  font-size: .7rem;
+}
+.JS{
+  font-size: .7rem;
+}
 }

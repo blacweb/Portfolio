@@ -169,3 +169,11 @@ window.onload = () => {
     lastDate.value = task.due;
   });
 };
+function cls(){
+  const close=document.querySelector(".menu_box");
+  close.style.display="none";
+}
+function open(){
+    const close=document.querySelector(".menu_box");
+  close.style.display="flex";
+}
