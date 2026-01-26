@@ -1,88 +1,63 @@
-const op=document.querySelectorAll(".btn_op");
-const nums=document.querySelectorAll(".btn");
-const math = ['0','1','2','3','4','5','6','7','8','9','.','+','-','*','/'];
-const operators = ['+','-','*','/'];
+const display = document.getElementById('display');
+let input = '';
 
-const result = document.querySelector(".result");
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => handle(btn.textContent));
+});
 
-document.addEventListener("keydown", event => {
-  const key = event.key;
-  const current = result.innerHTML;
-  const lastChar = current.slice(-1);
+function handle(value) {
+  if (value === 'AC') return clearAll();
+  if (value === '⌫') return backspace();
+  if (value === '=') return calculate();
+  if (value === '√') return squareRoot();
+  if (value === '%') return percentage();
 
-  // Clear calculator
-  if (key === 'Escape' || key.toLowerCase() === 'c') {
-    result.innerHTML = '0';
-    return;
-  }
-
-  // Calculate
-  if (key === 'Enter') {
-    try {
-      const evaluated = eval(current);
-      result.innerHTML = evaluated;
-    } catch {
-      result.innerHTML = 'Error';
-    }
-    return;
-  }
-
-  // Delete last character
-  if (key === 'Backspace') {
-    result.innerHTML = current.length > 1 ? current.slice(0, -1) : '0';
-    return;
-  }
-
-  // Ignore invalid keys
-  if (!math.includes(key)) return;
-
-  // Prevent multiple operators in a row
-  if (operators.includes(key) && operators.includes(lastChar)) return;
-
-  // Append valid input
-  if (current === '0' && key !== '.') {
-    result.innerHTML = key;
+  if ('÷×−+'.includes(value)) {
+    input += value
+      .replace('÷', '/')
+      .replace('×', '*')
+      .replace('−', '-');
   } else {
-    result.innerHTML += key;
+    input += value;
   }
-});
-// Handle number button clicks
-nums.forEach(btn => {
-  btn.addEventListener("click", event => {
-    const result = document.querySelector(".result");
-    const value = event.target.innerText;
 
-    // Replace 0 if it's the starting value
-    if (result.innerText === "0") {
-      result.innerText = value;
-    } else {
-      result.innerText += value;
-    }
-  });
-});
+  update();
+}
 
-// Handle operator button clicks
-op.forEach(btn => {
-  btn.addEventListener("click", event => {
-    const result = document.querySelector(".result");
-    result.innerText += event.target.innerText;
-  });
-});
+function update() {
+  display.textContent = input || '0';
+}
 
-// Handle evaluation when = is pressed
-function calculateResult() {
-  const res = document.querySelector(".result");
+function clearAll() {
+  input = '';
+  update();
+}
+
+function backspace() {
+  input = input.slice(0, -1);
+  update();
+}
+
+function calculate() {
   try {
-    res.innerText = eval(res.innerText);
-  } catch (err) {
-    res.innerText = "Error";
+    input = eval(input).toString();
+    update();
+  } catch {
+    display.textContent = 'Error';
+    input = '';
   }
 }
-function Ac(){
-  const result=document.querySelector(".result");
-  return result.innerText=0;
+
+function percentage() {
+  try {
+    input = (eval(input) / 100).toString();
+    update();
+  } catch {}
 }
-function clear(){
-  const result=document.querySelector(".result");
-  return result.innerText=result.slice(0,-1);
+
+function squareRoot() {
+  try {
+    input = Math.sqrt(eval(input)).toString();
+    update();
+  } catch {}
 }

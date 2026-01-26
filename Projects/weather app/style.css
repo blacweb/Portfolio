@@ -4,7 +4,7 @@
     /* background: url("mount-fuji-2297961_1280.jpg") no-repeat center center fixed; */
 }
 body {
-    background: url("mount-fuji-2297961_1280.jpg") no-repeat center center fixed;
+    background: url("media/mount-fuji-2297961_1280.jpg") no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
     display: flex;

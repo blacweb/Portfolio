@@ -1,319 +1,206 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-display: flex;
-flex-direction: column;
-height: 100vh;
-width: 100vw;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
 }
+
+/* ================= HEADER ================= */
+
 .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 10vh;
-    width: 95vw;
-    margin: 0 2rem 0 3rem;
-    /* border-bottom: 1px solid black; */
-    background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: #fff;
 }
 
 .menu {
-    height: 2rem;
-    width: 3rem;
-    background: #e2dddd;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
+  height: 2rem;
+  width: 2.5rem;
+  background: #e2dddd;
+  border: none;
+  border-radius: 5px;
 }
 
 .logo {
-    text-decoration: none;
-    /* text-decoration-line: none; */
-
-    font-family: sans-serif;
-    font-weight: 900;
-    color: rgb(156, 54, 251);
-    font-size: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(156, 54, 251);
+  text-decoration: none;
 }
 
 .log_in {
-    text-decoration: none;
-    color: rgb(156, 54, 251);
-    font-weight: 300;
-    font-family: sans-serif;
-    font-size: 1rem;
+  font-size: 1rem;
+  color: rgb(156, 54, 251);
+  text-decoration: none;
 }
+
+/* ================= DATE SECTION ================= */
 
 .current_date {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin: 0 0 0 3rem;
-}
-
-.day {
-    font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .dated {
-    display: flex;
-    width: 6vw;
-    justify-content: space-between;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.date {
-    font-family: sans-serif;
-}
-
-.month {
-    font-family: sans-serif;
-}
+/* ================= CREATE BUTTON ================= */
 
 .creat {
-    height: 2rem;
-    width: 9rem;
-    background: #e2dddd;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    margin: 1rem 0 0 4rem;
-    cursor: pointer;
+  height: 2rem;
+  width: 9rem;
+  margin: 1rem 2rem;
+  background: #e2dddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+/* ================= TASK BOX ================= */
 
 .taskbox {
-    background: #e2dddd;
-    /* height: 15vh; */
-    /* padding: 1rem; */
-    width: 80vw;
-    border-radius: 10px;
-    margin: 2rem 0 0 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+  background: #e2dddd;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 1rem;
 }
+
+/* ================= TASK ================= */
 
 .task {
-    height: 4rem;
-    width: 75vw;
-    background: white;
-    /* padding: 1rem; */
-    border-radius: 10px;
-    margin: 2rem 0 1rem 0;
-    display: flex;
-    align-items: center;
-    
-
-
-}
-
-.main {
-    display: flex;
-    align-items: center;
-    /* width:12rem; */
-    /* justify-content: space-between; */
-    margin: 0 0 0 1rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .outer {
-    display: flex;
-    width: 75vw;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.series {
-    font-family: sans-serif;
-    /* color: #cdcaca; */
-    font-weight: 300;
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
 }
 
 .read {
-    font: 300;
-    font-family: sans-serif;
-    border: none;
-    /* text-decoration: none; */
-    font-size: 1rem;
-    margin: 0 0 0 1rem;
-    width: 40rem;
-    box-shadow: 0 5px rgb(0, 0, 0, 0.5);
-    outline: none;
-   
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
 }
-.due_date{
-    background: rgb(185, 4, 4);
-    color: white;
-    font-family: sans-serif;
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    margin: 0 0 0 1rem;
-    height: 1.9rem;
+
+.funcs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
-.dates{
-    background: rgb(185, 4, 4);
-    color: white;
-    font-family: sans-serif;
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    margin: 0 0 0 1rem;
-    height: 1.9rem;
+
+/* ================= BUTTONS ================= */
+
+.due_date,
+.dates {
+  background: rgb(185, 4, 4);
+  color: white;
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
 }
+
 .complete {
-    background: #64c622;
-    color: white;
-    width: 8rem;
-    height: 2rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    margin: 0 0 0 1rem;
-    cursor: pointer;
+  background: #64c622;
+  color: white;
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
 }
 
 .delet {
-    height: 2rem;
-    width: 5rem;
-    display: flex;
-    align-items: center;
-    border: none;
-    background: white;
-    margin: 0 0 0 1rem;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+.done {
+  background: #b7b1b1;
 }
-.done{
-    color: black;
-    background: #b7b1b1;
-    font-size: 1rem;
-    font-family: sans-serif;
-}
-.funcs{
-    display: flex;
-    flex-direction: row;
-}
-@media(max-width:1350px){
-.head{
-    width: 95vw;
-margin-left: .5rem; 
-}
-.menu {
-    height: 1.5rem;
-    width: 2rem;
-}
-.current_date {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 90vw;
-}
-.read {
-    font: 300;
-    font-family: sans-serif;
-    font-size: 1rem;
-    margin: 1rem 0 0 1rem;
-    width: 40vw;
-   
-}
-.task {
-    height: 4rem;
-    width: 75vw;
-    background: white;
-    /* padding: 1rem; */
-    border-radius: 10px;
-    margin: 2rem 0 1rem 0;
-}
-.due_date{
-    background: rgb(185, 4, 4);
-    font-weight: 600;
-    margin: 0 0 0 1rem;
-    /* height: 1.9rem; */
-    width: 10rem;
-    font-size: .7rem;
-}
-.dates{
-width: 7rem;
-font-size: .7rem;
-}
-.taskbox {
-    background: #e2dddd;
-    /* height: 15vh; */
-    /* padding: 1rem; */
-    width: 95vw;
-    margin: 2rem 0 0 1rem;
-}
-.task {
-    height: 6rem;
-    width: 95%;
-    background: white;
-    /* padding: 1rem; */
-    border-radius: 10px;
-    margin: 1rem 0 1rem 0;
-}
-.creat {
-    height: 2rem;
-    width: 9rem;
-    margin: 1rem 0 0 2rem;
-}
-.current_date {
-    width: 80vw;
-    margin: 1rem 0 0 1rem;
-}
-.complete {
-    width: 3rem;
-    height: 2rem;
-    margin: 0 0 0 1rem;
-}
-.outer {
-    display: flex;
-    width: 85vw;
-    justify-content: space-between;
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .outer {
     flex-direction: column;
-}
-.main {
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 1rem;
-    width: 70vw;
-}
-.funcs{
-    width: 60vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem 0 1rem 18rem;
+  }
 
-} 
-.complete {
-    width: 8rem;
-    height: 2rem;
-    font-size: .7rem;
+  .funcs {
+    justify-content: flex-start;
+  }
 }
-.delet{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .head {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .current_date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .taskbox {
+    width: 95%;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .read {
+    max-width: 100%;
+  }
+
+  .funcs {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .complete,
+  .due_date,
+  .dates {
+    font-size: 0.7rem;
+  }
 }
