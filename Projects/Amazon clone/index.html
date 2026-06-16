@@ -1,1308 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://www/amazone.com/home</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Wallpoet&display=swap"
-    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+<!-- ════════════════════ HEADER ════════════════════ -->
+<header id="header">
+  <div class="header-main">
+    <div class="logo" onclick="showHome()">
+      <span class="logo-text">amazon</span>
+      <span class="logo-com">.com</span>
+    </div>
 
-<body>
-    <header>
-        <nav>
-            <div class="layer1">
-                <a href="index.html" class="logo"><img class="logo" src="media/logo/logo.png" alt="logo"></a>
-                <div class="loc">
-                    <div class="icon"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> </div>
-                    <div class="Deliver">
-                        <p class="to">Deliver to </p>
-                        <p class="country">United States</p>
-                    </div>
-                </div>
-                <div class="search">
-                    <button class="search_all">All</button><input class="Search_box" type="text"
-                        placeholder="Search Amazon"><button class="magnify_search"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <p class="lang"><img src="/Projects/Amazon clone/media/logo/United States.png" height="15px" alt="img">
-                    En</p>
-                <a href="" class="sign_in">Hello, Sign in</a>
-                <div class="return">Return <span class="order">& Orders</span></div>
-                <div class="cart"> <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>cart</div>
-            </div>
-            <div class="layer2">
-                <p class="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i> All</p>
-                <p class="secound_layer_items">Today's Deals</p>
-                <p class="secound_layer_items">Prime Video</p>
-                <p class="secound_layer_items">Registery</p>
-                <p class="secound_layer_items">Gift Cards</p>
-                <p class="secound_layer_items">Customer Service</p>
-                <p class="secound_layer_items">Sell</p>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero_section">
-            <div class="card_container">
-                <button class="left_arrow"><</button>
-                <div class="Hero_slider">
-                    <img class="layer_image" src="media/layer one pics/619geyiQI5L._SX3000_.jpg" alt="">
-                    <img class="layer_image" src="media/layer one pics/61Yx5-N155L._SX3000_.jpg" alt="">
-                    <img class="layer_image" src="media/layer one pics/71qcoYgEhzL._SX3000_.jpg" alt="">
-                    <img class="layer_image" src="media/layer one pics/81hIlE5xocL._SX3000_.jpg" alt="">
-                </div>
-                <button class="right_arrow">></button>
-                <div class="cards">
-                    <!-- Card 01 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            Easy update for eleveted spaces
-                        </h1>
-                        <div class="item1">
-                            <div class="item" onclick="location.href='products/product.html?id=1'">
-                                <img src="media/hero section media/easy update/2023Q2_GW_EE_LaundryLuxe_D_Quad_186x116._SY116_CB594237035_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Baskets and hampers</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/easy update/2023Q2_GW_EE_Kitchen_D_Quad_186x116._SY116_CB594237035_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Hardware</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/easy update/2023Q2_GW_EE_AccentFurniture_D_Quad_186x116._SY116_CB594237035_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Accent Furniture</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/easy update/2023Q2_GW_EE_Hallway_D_Quad_186x116._SY116_CB594237035_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Wallpaper & paint</p>
-                            </div>
+    <div class="deliver-to">
+      Deliver to<br><span>📍 New York 10001</span>
+    </div>
 
-                        </div>
-                        <a href="" class="card_hyperlink">Shop home products</a>
-                    </div>
-                    <!-- Card 02 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            Enjoy your Prime benefites
-                        </h1>
-                        <div class="item1">
-                            <div class="item">
-                                <img src="media/hero section media/prime benfites/Fuji_Benefits_FreeDelivery_1x._SY116_CB800630178_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="Item_des">Free Delivery</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/prime benfites/Fuji_Benefits_PBDDDeals_1x._SY116_CB800630178_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Prime big Deal Days</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/prime benfites/Fuji_Benefits_PV_1x._SY116_CB800630178_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Prime Video</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/prime benfites/Fuji_Benefits_Twitch_1x._SY116_CB800630178_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Prime Gaming</p>
-                            </div>
+    <div class="search-bar">
+      <select class="search-cat">
+        <option>All</option><option>Electronics</option><option>Books</option>
+        <option>Clothing</option><option>Home</option><option>Toys</option>
+      </select>
+      <input class="search-input" type="text" placeholder="Search Amazon" id="searchInput" oninput="filterProducts()" />
+      <button class="search-btn" onclick="filterProducts()">🔍</button>
+    </div>
 
-                        </div>
-                        <a href="" class="card_hyperlink">Learn more</a>
-                    </div>
-                    <!-- Card 03 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            Refresh your space
-                        </h1>
-                        <div class="item1">
-                            <div class="item">
-                                <img src="media/hero section media/refresh space/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="Item_des">Dining</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/refresh space/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Home</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/refresh space/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Kitchen</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/refresh space/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Health and Beauty</p>
-                            </div>
-                        </div>
-                        <a href="" class="card_hyperlink">see more</a>
-                    </div>
-                    <!-- Card 04 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            Fashion trends you like
-                        </h1>
-                        <div class="item1"><!-- this is row 1 of Items -->
-                            <div class="item">
-                                <img src="media/hero section media/fashion trends/LSS23_SPRING_DT_CAT_CARD_2_x1._SY116_CB595261253_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="Item_des">Dresses</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/fashion trends/LSS23_SPRING_DT_CAT_CARD_3_x1._SY116_CB595261253_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">knits</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/fashion trends/LSS23_SPRING_DT_CAT_CARD_1_x1._SY116_CB595261253_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Jackets</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/fashion trends/LSS23_SPRING_DT_CAT_CARD_4_x1._SY116_CB595261253_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Jewelry</p>
-                            </div>
-                        </div>
-                        <a href="" class="card_hyperlink">Explore more</a>
-                    </div>
-                </div>
-                <!--Card no 5 is different then others -->
-                <div class="cards">
-                    <div class="card">
-                        <h1 class="heading">
-                            Top categories in kitchen and appliences
-                        </h1>
-                        <div class="big_item">
-                            <img src="media/hero section media/kitchen/313wAT6Iy2L._SY160_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="Item_des">Cooker</p>
-                        </div>
-                        <div class="Kitchen_items">
-                            <div class="kitchen_item">
-                                <img src="media/hero section media/kitchen/21W7-lndINL._SY75_.jpg" alt="img"
-                                    class="card_imgs">
-                                <p class="item_des">coffee</p>
-                            </div>
-                            <div class="kitchen_item">
-                                <img src="media/hero section media/kitchen/21B-NkA9p-L._SY75_.jpg" alt="img"
-                                    class="card_imgs">
-                                <p class="item_des">Pots and Pans</p>
-                            </div>
-                            <div class="kitchen_item">
-                                <img src="media/hero section media/kitchen/217GQ1a2QzL._SY75_.jpg" alt="img"
-                                    class="card_imgs">
-                                <p class="item_des">Kettles</p>
-                                                            </div>
-                        </div>
-                        <a href="" class="card_hyperlink">Explore all products in kitchen</a>
-                    </div>
-                    <!-- Card 06 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            Shop for your home essentials
-                        </h1>
-                        <div class="item1">
-                            <div class="item">
-                                <img src="media/hero section media/home essentials/CleaningTool_1x._SY116_CB563137408_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="Item_des">Cleaning Tools</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/home essentials/HomeStorage_1x._SY116_CB563137408_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Home Storage</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/home essentials/HomeDecor_1x._SY116_CB563137408_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Home Decor</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/home essentials/Bedding_1x._SY116_CB563137408_.jpg"
-                                    alt="img" class="item_imgs">
-                                <p class="item_des">Bedding</p>
-                            </div>
-                        </div>
-                        <a href="" class="card_hyperlink">Discover more in home</a>
-                    </div>
-                    <!-- Card 07 -->
-                    <div class="card">
-                        <h1 class="heading">
-                            New home arivals under $ 50
-                        </h1>
-                        <div class="item1">
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="Item_des">kitchen and dining</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Home improvement</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Decor</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Bedding & Bath</p>
-                            </div>
-                        </div>
-                        <a href="" class="card_hyperlink">Shop the latest from home</a>
-                    </div>
-                    <!-- ! One Card Item-->
-                    <div class="card">
-                        <h1 class="heading">
-                            Get your game on
-                        </h1>
-                        <div class="one_item">
-                            <img src="media/hero section media/game/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg"
-                                alt="img" class="card_imgs">
-                        </div>
-                        <a href="" class="card_hyperlink">Shop the latest from home</a>
-                    </div>
-                </div>
-            </div>
-        </section class="long_box_section">
-        <!--   long box section -->
-        <section class="International_purchase">
-            <!-- long box 1 -->
-            <div class="long_card">
-                <h1 class="long_card_heading">
-                    New International customers purchased
-                </h1>
-                <div class="long_card_item">
-                    <img src="media/International section/51+yNMwODML._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/International section/51P6UDMC5pL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/International section/51R-VS4++KL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/International section/51r5QiOd51L._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/International section/51r5QiOd51L._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/International section/61ciknSL0lL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                </div>
-            </div>
-            <!-- long box 2 -->
-            <div class="long_card">
-                <h1 class="long_card_heading">
-                    Popular products in Wireless International
-                </h1>
-                <div class="long_card_item">
-                    <img src="media/Popular product/51kVG1p-d2L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/51oKJkR+k9L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/51s5vLER4GL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/616pvyQUsAL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/61DDmZkqFuL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/71gi8jQS17L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                </div>
-            </div>
-        </section>
-        <!-- cards section -->
-        <section>
-            <div class="cards">
-                <div class="card">
-                    <div class="heading">
-                        <h1 class="heading">
-                            Upgrade your office furniture
-                        </h1>
-                        <div class="one_item">
-                            <img src="media/upgrade office/D_CC_Roar_OfficeDepot_1023_1X_Furnitrure_v2._SY304_CB577544739_.jpg"
-                                alt="img" class="card_imgs">
-                        </div>
-                        <a href="" class="card_hyperlink">Shop now</a>
-                </div>
-                </div>
-                <!-- card 2 -->
-                <div class="card">
-                    <h1 class="heading">
-                        Books you can't put down
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Childrens_Books._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="Item_des">Children's books</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Mystery._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">Mystery</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Fiction._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">Finction</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Motivational._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Motivational</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Discover more</a>
-                </div>
+    <div class="header-links">
+      <div class="hlink">Hello, Sign in<span>Account & Lists</span></div>
+      <div class="hlink">Returns<span>& Orders</span></div>
+      <div class="hlink cart-btn" onclick="openCart()">
+        <div class="cart-icon">🛒<span class="cart-count" id="cartCount">0</span></div>
+        <span style="color:#fff;font-size:14px;font-weight:700">Cart</span>
+      </div>
+    </div>
+  </div>
 
-                <!-- card 3 -->
-                <div class="card">
-                    <h1 class="heading">
-                        Level up your PC
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Laptop._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="Item_des">Laptops</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_PC._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">PCs</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Hard_Drives._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Hard Drives</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Monitors._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Moniters</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Discover more</a>
-                </div>
-                <!-- card 4 -->
-                <div class="card">
-                    <h1 class="heading">
-                        Most Loved Travel essentials
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Travel/Backpack_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="Item_des">Backpacks</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Travel/TravelBag_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Suitcases</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Travel/Accessories_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Accesories</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Travel/Handbags_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Handbages</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Discover more</a>
-                </div>
-            </div>
-        </section>
-        <!-- 2nd Long box Section -->
-        <section>
-            <div class="long_card">
-                <h1 class="long_card_heading">
-                    Popular products in Pc Internationally
-                </h1>
-                <div class="long_card_item">
-                    <img src="media/Popular product/51kVG1p-d2L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/51oKJkR+k9L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/51s5vLER4GL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/616pvyQUsAL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/61DDmZkqFuL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                    <img src="media/Popular product/71gi8jQS17L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                </div>
-            </div>
-        </section>
-        <div class="long_card">
-            <h1 class="long_card_heading">
-                International top sellers in home improvements
-            </h1>
-            <div class="long_card_item">
-                <img src="media/top sellers in home/516CSs7IjwL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/611mADAr6+L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/61kNjEmU42L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/61NjEV0UvKL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/71+fNITt10L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/710FDFW7GfL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-            </div>
+  <nav id="navbar">
+    <div class="nav-item bold" onclick="showHome()">☰ All</div>
+    <div class="nav-item" onclick="filterCat('Electronics')">Electronics</div>
+    <div class="nav-item" onclick="filterCat('Fashion')">Fashion</div>
+    <div class="nav-item" onclick="filterCat('Home')">Home & Kitchen</div>
+    <div class="nav-item" onclick="filterCat('Books')">Books</div>
+    <div class="nav-item" onclick="filterCat('Toys')">Toys & Games</div>
+    <div class="nav-item" onclick="filterCat('Sports')">Sports</div>
+    <div class="nav-item" onclick="filterCat('Beauty')">Beauty</div>
+    <div class="nav-item" onclick="filterCat('Grocery')">Grocery</div>
+    <div class="nav-item" style="color:var(--amazon-yellow)">Today's Deals</div>
+    <div class="nav-item">Customer Service</div>
+    <div class="nav-item">Prime</div>
+  </nav>
+</header>
+
+<!-- ════════════════════ HOME PAGE ════════════════════ -->
+<div id="home-page">
+
+  <!-- Hero -->
+  <div id="hero">
+    <button class="hero-arrow left" onclick="slideHero(-1)">&#8249;</button>
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1400&q=80" alt="Deals" />
+        <div class="hero-overlay">
+          <h2>Big Spring Sale</h2>
+          <p>Save big on electronics, fashion, home goods & more.</p>
+          <a class="hero-btn" href="#" onclick="event.preventDefault();filterCat('Electronics')">Shop Now</a>
         </div>
-        </section>
-        <!-- cards section -->
-        <section>
-            <div class="cards">
-                <!-- card 1 -->
-                <div class="card">
-                    <h1 class="heading">
-                        warm and welcome decor
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Childrens_Books._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="Item_des">wreath and garlands</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Mystery._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">outdoor decor</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Fiction._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">Pillows and throws</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Books/Fuji_Defect_Reduction_1x_Motivational._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Wall art and mirrors</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Shop more fall finds</a>
-                </div>
-
-                <!-- card 2 -->
-                <div class="card">
-                    <h1 class="heading">
-                        Level up your PC
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Laptop._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="Item_des">Laptops</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_PC._SY116_CB549022351_.jpg" alt="img"
-                                class="card_imgs">
-                            <p class="item_des">PCs</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Hard_Drives._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Hard Drives</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Uprade PC/Fuji_Defect_Reduction_1x_Monitors._SY116_CB549022351_.jpg"
-                                alt="img" class="card_imgs">
-                            <p class="item_des">Moniters</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Discover more</a>
-                </div>
-                <!-- card 3 -->
-                <div class="card">
-                    <h1 class="heading">
-                        Most Loved Travel essentials
-                    </h1>
-                    <div class="item1">
-                        <div class="item">
-                            <img src="media/Travel/Backpack_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="Item_des">Backpacks</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Travel/TravelBag_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Suitcases</p>
-                        </div>
-                    </div>
-                    <div class="item2">
-                        <div class="item">
-                            <img src="media/Travel/Accessories_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Accesories</p>
-                        </div>
-                        <div class="item">
-                            <img src="media/Travel/Handbags_1x._SY116_CB566100767_.jpg" alt="img" class="card_imgs">
-                            <p class="item_des">Handbages</p>
-                        </div>
-                    </div>
-                    <a href="" class="card_hyperlink">Discover more</a>
-                </div>
-                <!-- 04 -->
-                  <div class="card">
-                        <h1 class="heading">
-                            New home arivals under $ 50
-                        </h1>
-                        <div class="item1">
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="Item_des">kitchen and dining</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Home improvement</p>
-                            </div>
-                        </div>
-                        <div class="item2">
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Decor</p>
-                            </div>
-                            <div class="item">
-                                <img src="media/hero section media/Under 50/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_1x._SY116_CB555960040_.jpg"
-                                    alt="img" class="card_imgs">
-                                <p class="item_des">Bedding & Bath</p>
-                            </div>
-            </div>
-        </section>
-        <!-- long box section 3rd time -->
-        <section>
-            <div class="long_card">
-                <h1 class="long_card_heading">
-                    Best Sellers in toys
-                </h1>
-                <div class="long_card_item">
-                    <img src="media/Best seller in toys/51CfZ8zGq9L._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/Best seller in toys/6173--LFZ2L._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/Best seller in toys/61TZzq7oBKL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/Best seller in toys/61TZzq7oBKL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/Best seller in toys/61wZNao0meL._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                    <img src="media/Best seller in toys/61ZDr0RsX6L._AC_SY200_.jpg" alt="img"
-                        class="long_box_item_image">
-                </div>
-            </div>
-        </section>
-        <div class="long_card">
-            <h1 class="long_card_heading">
-                International top sellers in home improvements
-            </h1>
-            <div class="long_card_item">
-                <img src="media/top sellers in home/516CSs7IjwL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/611mADAr6+L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/61kNjEmU42L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/61NjEV0UvKL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/71+fNITt10L._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-                <img src="media/top sellers in home/710FDFW7GfL._AC_SY200_.jpg" alt="img" class="long_box_item_image">
-            </div>
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1400&q=80" alt="Electronics" />
+        <div class="hero-overlay">
+          <h2>Latest Electronics</h2>
+          <p>Top brands, best prices — laptops, phones, audio & more.</p>
+          <a class="hero-btn" href="#" onclick="event.preventDefault();filterCat('Electronics')">Shop Electronics</a>
         </div>
-        </section>
-        <!-- Recomndation section -->
-        <section>
-            <div class="recomendation">
-                <h1 class="recomdation_heading">
-                    Recomendations for You
-                </h1>
-                <div class="products">
-                    <div class="product">
-                        <img src="media/Recomndations/515W50hwJmL._AC_UL165_SR165,165_.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                            MSI Katana 15 HX 15.6” 165Hz QHD+ Gaming Laptop: Intel Core i9-14900HX, NVIDIA Geforce RTX
-                            5070, 32GB DDR5, 1TB NVMe SSD, RGB Keyboard, Win 11 Home: Black B14WGK-016US
-                        </p>
-                        <p class="rating">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">3,104</p>
-                            <p class="product_cents">71</p>
-                        </div>
-                        <p class="shiping">
-                            $80.67 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/81vNDgwJ+VL._AC_UL165_SR165,165_.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                            Lenovo Legion Pro 7i – Gaming Laptop - Intel® Core™ Ultra 9 275HX – 16" 2.5K WQXGA OLED
-                            Display – 240Hz Refresh Rate – GeForce RTX™ 5070 Ti GPU – 32 GB Memory – 1 TB Storage –
-                            3-month PC GamePass
-                        </p>
-                        <p class="rating">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">2,236</p>
-                            <p class="product_cents">67</p>
-                        </div>
-                        <p class="shiping">
-                            $89.64 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/81n1T4CYfmL._AC_UL165_SR165,165_.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                            ASUS ROG Strix G16 (2025) Gaming Laptop, 16” ROG Nebula Display 16:10 2.5K 240Hz/3ms,
-                            NVIDIA® GeForce RTX™ 5060 GPU, Intel® Core™ Ultra 9 Processor 275HX, 16GB DDR5, 1TB SSD,
-                            Wi-Fi 7, Wind11 Home
-                        </p>
-                        <p class="time">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">1,606</p>
-                            <p class="product_cents">77</p>
-                        </div>
-                        <p class="shiping">
-
-                            $88.54 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/acer notro.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                         Acer Nitro V 16S AI Gaming Laptop | AMD Ryzen 7 260 Processor | NVIDIA GeForce RTX 5060 Laptop GPU (572 AI Tops) | 16" WUXGA IPS 180Hz Display | 32GB DDR5 | 1TB Gen 4 SSD | Wi-Fi 6 | ANV16S-41-R2AJ
-
-                        </p>
-                        <p class="time">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">1224</p>
-                            <p class="product_cents">78</p>
-                        </div>
-                        <p class="shiping">
-
-                            $104.54 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/81NkQcTxKDL._AC_UL165_SR165,165_.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-             GIGABYTE - Gaming A16 Gaming Laptop - 165Hz 1920x1200 WUXGA - NVIDIA GeForce RTX 5070 - Intel i7-13620H - 1TB SSD with 32GB DDR5 RAM - Windows 11 Home AD Gaming A16 CWHI3US864SH
-
-                        </p>
-                        <p class="time">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">1399</p>
-                            <p class="product_cents">99</p>
-                        </div>
-                        <p class="shiping">
-
-                            $184.54 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/71ZEi4fMrzL._AC_UL165_SR165,165_.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                         ASUS TUF Gaming F16 (2024) Gaming Laptop, 16” FHD+ 144Hz IPS-Level 16:10 Display, Intel® Core™ 5 210H Processor, NVIDIA® GeForce RTX™ 4050, 8GB DDR5, 512GB PCIe Gen4 SSD, Wi-Fi 6, Windows 11 Home
-
-                        </p>
-                        <p class="time">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">949</p>
-                            <p class="product_cents">77</p>
-                        </div>
-                        <p class="shiping">
-
-                            $124.54 shipping
-                        </p>
-                    </div>
-                    <div class="product">
-                        <img src="media/Recomndations/Giga byte.jpg" alt=""
-                            class="product_image">
-                        <p class="product_des">
-                        GIGABYTE - AORUS MASTER 16 Gaming Laptop - 240Hz 2560x1600 OLED - NVIDIA GeForce RTX 5070 Ti - Intel Core Ultra 9 275HX - 1TB SSD with 32GB DDR5 RAM - Windows 11 Home AD (AORUS MASTER 16 BXHC4USE64SH)
-
-
-                        </p>
-                        <p class="time">
-
-                        </p>
-                        <div class="product_price">
-                            <p class="product_cur">$</p>
-                            <p class="product_dollars">2199</p>
-                            <p class="product_cents">99</p>
-                        </div>
-                        <p class="shiping">
-
-                            $154.54 shipping
-                        </p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!-- Sign-in Section  -->
-        <section>
-            <div class="sign_box">
-                <h1 class="sign_in_heading">
-                    See personalized recomendations
-                </h1>
-                <button class="sign">
-                    Sign in
-                </button>
-                <p class="new_cust">
-                    New customer?<a class="Start" href="">Start here</a>
-                </p>
-            </div>
-            <button class="to_top">
-                Back to top
-            </button>
-        </section>
-    </main>
-    <footer>
-        <div class="catalogs">
-            <div class="catalog">
-                <div class="Cat_section">
-                    <h1 class="Cat_heading">
-                        Get to know us
-                    </h1>
-                    <p class="catatlog_links">
-                        Careers
-                    </p>
-                    <p class="catatlog_links">
-                        Blogs
-                    </p>
-                    <p class="catatlog_links">
-                        About Amazon
-                    </p>
-                    <p class="catatlog_links">
-                        Invester Relations
-                    </p>
-                    <p class="catatlog_links">
-                        Amazon Devices
-                    </p>
-                    <p class="catatlog_links">
-                        Amazon Science
-                    </p>
-                </div>
-                <div class="Cat_section">
-                    <h1 class="Cat_heading">
-                        Make money with us
-                    </h1>
-                    <p class="catatlog_links">
-                        Sell products on Amazon
-                    </p>
-                    <p class="catatlog_links">
-                        Sell on Amazon Bussiness
-                    </p>
-                    <p class="catatlog_links">
-                        Sell apps on Amazon
-                    </p>
-                    <p class="catatlog_links">
-                        Become an Affiliate
-                    </p>
-                    <p class="catatlog_links">
-                        Adverstise your products
-                    </p>
-                    <p class="catatlog_links">
-                        Self publish with us
-                    </p>
-                    <p class="catatlog_links">
-                        host an Amazon Hub
-                    </p>
-                    <p class="catatlog_links">
-                        See more make money with us
-                    </p>
-                </div>
-                <div class="Cat_section">
-                    <h1 class="Cat_heading">
-                        Amzone Payment products
-                    </h1>
-                    <p class="catatlog_links">
-                        Amazone bussiness card
-                    </p>
-                    <p class="catatlog_links">
-                        Shop with points
-                    </p>
-                    <p class="catatlog_links">
-                        Reload your balance
-                    </p>
-                    <p class="catatlog_links">
-                        Amazon currency converter
-                    </p>
-                </div>
-                <div class="Cat_section">
-                    <h1 class="Cat_heading">
-                        Let Us help you
-                    </h1>
-                    <p class="catatlog_links">
-                        Amazon and COVID-19
-                    </p>
-                    <p class="catatlog_links">
-                        Your Account
-                    </p>
-                    <p class="catatlog_links">
-                        Your Orders
-                    </p>
-                    <p class="catatlog_links">
-                        Shiping rates and Policies
-                    </p>
-                    <p class="catatlog_links">
-                        Returns and Replacements
-                    </p>
-                    <p class="catatlog_links">
-                        Manage Your content and Devices
-                    </p>
-                    <p class="catatlog_links">
-                        Help
-                    </p>
-                </div>
-            </div>
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1400&q=80" alt="Fashion" />
+        <div class="hero-overlay">
+          <h2>Fashion Finds</h2>
+          <p>New styles added daily — dress the look you love.</p>
+          <a class="hero-btn" href="#" onclick="event.preventDefault();filterCat('Fashion')">Shop Fashion</a>
         </div>
-        <div class="lang_boxs">
-            <div class="lang_box_stable">
-                <img class="bottum_logo" src="media/logo/logo.png" alt="logo">
-                <div class="long_boxes">
-                    <div class="language_box">
-                        <i class="fa-solid fa-earth-europe"></i> English-US
-                    </div>
-                    <div class="currency_box">
-                        $ USD-U.S. Dollars
-                    </div>
-                    <div class="country_box">
-                        <img src="/Projects/Amazon clone/media/logo/United States.png" height="15px" alt="img"> United
-                        States
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="other_apps">
-            <div class="apps_box">
-                <!--  colunm 1 -->
-                <div class="app_colunm1">
-                    <div class="app">
-                        <p class="app_name">
-                            Amazon Music
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Stream millions
-                        </p>
-                        <p class="app_des_txt">
-                            of songs
-                        </p>
+      </div>
+    </div>
+    <button class="hero-arrow right" onclick="slideHero(1)">&#8250;</button>
+    <div class="hero-dots" id="heroDots">
+      <div class="hero-dot active" onclick="goSlide(0)"></div>
+      <div class="hero-dot" onclick="goSlide(1)"></div>
+      <div class="hero-dot" onclick="goSlide(2)"></div>
+    </div>
+  </div>
 
-                        </p>
-                    </div>
-                    <div class="app">
-                        <p class="app_name">
-                            Amazon Business
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Everything for
-                        </p>
-                        <p class="app_des_txt">
-                            Your Bussiness
-                        </p>
-                        </p>
-                    </div>
-                    <div class="app">
-                        <p class="app_name">
-                            IMDB Pro
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Get Info
-                        </p>
-                        <p class="app_des_txt">
-                            EnterTainment
-                        </p>
-                        <p class="app_des_txt">
-                            & Professional Needs
-                        </p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app_colunm2">
-                    <!-- 4 apps -->
-                    <!-- 01 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Amazon ads
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Reach cutomers
-                        </p>
-                        <p class="app_des_txt">
-                            wherever they
-                        </p>
-                        <p class="app_des_txt">
-                            spend thier time
-                        </p>
-                        </p>
-                    </div>
-                    <!-- 02 -->
-                    <div class="app">
-                        <p class="app_name">
-                            AmazonGlobal
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Ship Orders
-                        </p>
-                        <p class="app_des_txt">
-                            Interationally
-                        </p>
-                        </p>
-                    </div>
-                    <!-- 03 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Kinlde Direct
-                            Publishing
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Indie Digital and
-                        </p>
-                        <p class="app_des_txt">
-                            Print Publishing
-                        </p>
-                        <p class="app_des_txt">
-                            Made Easy
-                        </p>
-                        </p>
-                    </div>
-                    <!-- 04 -->
-                    <div class="app">
-                        <p class="app_name">
-                            eero Wifi
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Stream 4K video
-                        </p>
-                        <p class="app_des_txt">
-                            in every room
-                        </p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app_colunm3">
-                    <!-- 04 apps -->
-                    <!-- 01 -->
-                    <div class="app">
-                        <p class="app_name">
-                            6pm
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Score deals
-                        </p>
-                        <p class="app_des_txt">
-                            on fashion brands
-                        </p>
-                        </p>
-                    </div>
-                    <!-- 02 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Amazon web service
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Scalable
-                        </p>
-                        <p class="app_des_txt">
-                            Cloud computing
-                        </p>
-                        <p class="app_des_txt">
-                            Services
-                        </p>
+  <!-- Main -->
+  <div id="main">
 
-                        </p>
-                    </div>
-                    <!-- 03 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Prime video Direct
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Video distribution
-                        </p>
-                        <p class="app_des_txt">
-                            made easy
-                        </p>
-                        </p>
-                    </div>
-                    <!-- 04 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Blink
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Smart Security
-                        </p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app_colunm4">
-                    <!-- 04 apps -->
-                    <!-- 01 -->
-                    <div class="app">
-                        <p class="app_name">
-                            AbeBooks
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Books, arts
+    <!-- Categories -->
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="deal-grid" id="catGrid"></div>
 
-                        </p>
-                        <p class="app_des_txt">& collections</p>
-                        </p>
-                    </div>
-                    <!-- 02 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Audible
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Listen to Books &
-                        </p>
-                        <p class="app_des_txt">Otignal audios, songs</p>
-                        </p>
-                    </div>
-                    <!-- 03 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Shopbop
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Designers
-                        </p>
-                        <p class="app_des_txt">Fashion & brands</p>
-                        </p>
-                    </div>
-                    <!-- 04 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Nieghbours App
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Realtime crime &
-                        </p>
-                        <p class="app_des_txt">Safety Alerts</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app_colunm5">
-                    <!-- 04 apps -->
-                    <!-- 01 -->
-                    <div class="app">
-                        <p class="app_name">
-                            ACX
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Audiobook Publishing
-                        </p>
-                        <p class="app_des_txt">Made Easy</p>
-                        </p>
-                    </div>
-                    <!-- 02 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Box Office Mojo
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Find movies
-                        </p>
-                        <p class="app_des_txt">Box Office Data</p>
-                        </p>
-                    </div>
-                    <!-- 03 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Woot!
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Deals and
-                        </p>
-                        <p class="app_des_txt">Shananiguns</p>
-                        </p>
-                    </div>
-                    <!-- 04 -->
-                    <div class="app">
-                        <p class="app_name">
-                        <p class="app_des_txt">
-                            Amazon and
-                        </p>
-                        <p class="app_des_txt">Subscription Boxes</p>
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Top sunscription
-                        </p>
-                        <p class="app_des_txt">boxes-right to</p>
-                        <p class="app_des_txt">your door</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app-colunm6">
-                    <!-- 04 apps-->
-                    <!-- 01 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Sell on Amazon
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Start selling
-                        </p>
-                        <p class="app_des_txt">account</p>
-                        </p>
-                    </div>
-                    <!-- 02 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Good reads
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Book reviews
-                        </p>
-                        <p class="app_des_txt">&</p>
-                        <p class="app_des_txt">recomendation</p>
-                        </p>
-                    </div>
-                    <!-- 03 -->
-                    <div class="app">
-                        <p class="app_name">
-                            Zappos
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            shoes &
-                        </p>
-                        <p class="app_des_txt">Clothing</p>
-                        </p>
-                    </div>
-                    <!-- 04 -->
-                    <div class="app">
-                        <p class="app_name">
-                            PillPack
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Pharmacy
-                        </p>
-                        <p class="app_des_txt">simplified</p>
-                        </p>
-                    </div>
-                </div>
-                <div class="app_colunm7">
-                    <div class="app">
-                        <p class="app_name">
-                            veeqo
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Shiping Software
-                        </p>
-                        <p class="app_des_txt">Inventory</p>
-                        <p class="app_des_txt">Managment</p>
-                        </p>
-                    </div>
-                    <div class="app">
-                        <p class="app_name">
-                            IMDB
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Movies, TV
-                        </p>
-                        <p class="app_des_txt">Celebrities</p>
-                        </p>
-                    </div>
-                    <div class="app">
-                        <p class="app_name">
-                            Ring
-                        </p>
-                        <p class="app_des">
-                        <p class="app_des_txt">
-                            Smart Home
-                        </p>
-                        <p class="app_des_txt">
-                            Security systems
-                        </p>
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Products -->
+    <h2 class="section-title" id="productHeading">Featured Products</h2>
+    <div class="products-grid" id="productsGrid"></div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul><li>Careers</li><li>Blog</li><li>About Amazon</li><li>Investor Relations</li><li>Amazon Devices</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul><li>Sell products on Amazon</li><li>Sell on Amazon Business</li><li>Sell apps on AWS</li><li>Become an Affiliate</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Amazon Payment Products</h4>
+        <ul><li>Amazon Business Card</li><li>Shop with Points</li><li>Reload Your Balance</li><li>Amazon Currency Converter</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul><li>Your Account</li><li>Your Orders</li><li>Shipping Rates & Policies</li><li>Returns & Replacements</li><li>Help</li></ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="logo-text" style="display:inline;font-size:20px;color:#FF9900">amazon</div>
+      <p style="margin-top:8px">© 2024 Amazon Clone — Built for demonstration purposes only</p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ════════════════════ PRODUCT PAGE ════════════════════ -->
+<div id="product-page">
+  <div class="prod-header">
+    <button class="back-btn" onclick="showHome()">← Back to results</button>
+    <div class="prod-logo">amazon</div>
+    <div style="flex:1"></div>
+    <div class="hlink cart-btn" onclick="openCart()" style="color:#fff">
+      <div class="cart-icon" style="position:relative;font-size:28px">🛒<span class="cart-count" id="cartCount2">0</span></div>
+      <span style="font-size:14px;font-weight:700">Cart</span>
+    </div>
+  </div>
+  <div class="prod-content">
+    <div class="prod-gallery">
+      <img class="prod-main-img" id="prodMainImg" src="" alt="" />
+      <div class="prod-thumbs" id="prodThumbs"></div>
+    </div>
+    <div class="prod-info" id="prodInfo"></div>
+  </div>
+</div>
+
+<!-- ════════════════════ CART SIDEBAR ════════════════════ -->
+<div id="cart-overlay">
+  <div class="cart-backdrop" onclick="closeCart()"></div>
+  <div class="cart-panel">
+    <div class="cart-head">
+      <h2>🛒 Shopping Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <div class="cart-subtotal">Subtotal: <span id="cartTotal">$0.00</span></div>
+      <button class="btn-checkout" onclick="openCheckout()">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ CHECKOUT PAGE ════════════════════ -->
+<div id="checkout-page">
+  <div class="prod-header">
+    <button class="back-btn" onclick="closeCheckout()">← Back to Cart</button>
+    <div class="prod-logo">amazon</div>
+    <div style="flex:1"></div>
+    <div style="color:#fff;font-size:14px">Secure Checkout 🔒</div>
+  </div>
+  <div class="checkout-wrap">
+    <div class="checkout-left">
+      <h2>Shipping Address</h2>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John" /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
+      </div>
+      <div class="form-group"><label>Address Line 1</label><input type="text" placeholder="123 Main Street" /></div>
+      <div class="form-group"><label>Address Line 2</label><input type="text" placeholder="Apt, Suite, etc. (optional)" /></div>
+      <div class="form-row">
+        <div class="form-group"><label>City</label><input type="text" placeholder="New York" /></div>
+        <div class="form-group"><label>ZIP Code</label><input type="text" placeholder="10001" /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>State</label>
+          <select><option>New York</option><option>California</option><option>Texas</option><option>Florida</option><option>Illinois</option></select>
         </div>
-        <div class="policies">
-            <div class="laws">
-                <p class="law">condition of use</p>
-                <p class="law">Privacy notice</p>
-                <p class="law">consumer Health Data Privacy Disclosour</p>
-                <p class="law">Your ads Privacy Choices</p>
-            </div>
-            <div class="since">
-                <p class="date">
-                    &copy; 1996-2025,Amazon.com,Inc. or its Associates
-                </p>
-            </div>
+        <div class="form-group"><label>Country</label>
+          <select><option>United States</option><option>Canada</option><option>United Kingdom</option></select>
         </div>
-    </footer>
+      </div>
+
+      <h2 style="margin-top:24px">Payment Method</h2>
+      <div class="payment-icons">💳 <span style="font-size:14px;margin-top:4px">Visa, Mastercard, Amex accepted</span></div>
+      <div class="form-group"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" /></div>
+      <div class="form-row">
+        <div class="form-group"><label>Expiry Date</label><input type="text" placeholder="MM / YY" maxlength="7" /></div>
+        <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4" /></div>
+      </div>
+      <div class="form-group"><label>Name on Card</label><input type="text" placeholder="John Doe" /></div>
+    </div>
+
+    <div class="checkout-right">
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="checkoutItems"></div>
+        <div class="order-row"><span>Subtotal</span><span id="checkoutSubtotal">$0.00</span></div>
+        <div class="order-row"><span>Shipping</span><span style="color:var(--amazon-green)">FREE</span></div>
+        <div class="order-row"><span>Tax (8%)</span><span id="checkoutTax">$0.00</span></div>
+        <div class="order-total"><span>Order Total</span><span id="checkoutTotal">$0.00</span></div>
+        <button class="btn-place-order" onclick="placeOrder()">Place Your Order</button>
+        <p style="font-size:11px;color:var(--text-muted);margin-top:10px;text-align:center">By placing your order, you agree to Amazon's privacy notice and conditions of use.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SUCCESS PAGE ════════════════════ -->
+<div id="success-page">
+  <div class="success-icon">✅</div>
+  <div class="success-title">Order Placed!</div>
+  <div class="success-sub">Thank you for your purchase. Your items are on their way!</div>
+  <div class="success-order" id="successOrderNum"></div>
+  <button class="btn-continue" onclick="finishOrder()">Continue Shopping</button>
+</div>
+
+<!-- ════════════════════ TOAST ════════════════════ -->
+<div id="toast"></div>
+<script src="index.js"></script> 
 </body>
-
 </html>

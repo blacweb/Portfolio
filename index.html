@@ -2,187 +2,304 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://portfolio.com</title>
-    <link rel="stylesheet" href="./styles/Style.css">
-    <script defer src="./JS files/index.js"></script>
-    <script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codify — Web Developer Portfolio</title>
+  <link rel="stylesheet" href="styles/Style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script defer src="JS files/index.js"></script>
 </head>
 
 <body>
-    <header>
-        <!-- This is the navbar of the website -->
-        <div class="bar">
-            <div class="menu_box">
-                     <a href="index.html" class="menu_home">Home</a>
-                       <p class="menu_MyProjects">My Projects</p>
-                  <a href="./others/resume.html" class="menu_resume">My Resume</a>
-            <a href="./others/contact.html" class="menu_Contact">Contact</a>
-            <button onclick="cls()" class="cls_menu">close</button>
-            </div>
-                <button onclick="opn()" class="menu"><i class="fa-solid fa-bars" style="background-color: azure;"></i></button>
-            <a href="index.html" class="logo">
-                <h1 class="logo">
-                    <\>Codify
-                </h1>
-            </a>
-            <a href="index.html" class="home">Home</a>
-            <p class="MyProjects">My Projects</p>
-            <a href="./others/resume.html" class="resume">My Resume</a>
-            <a href="./others/contact.html" class="Contact">Contact</a>
-            <button class="E-mail">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
-                target="_blank" class="email">
-                Email me </a><i class="fa-solid fa-envelope" style="background-color: white"></i>
-            </button>
-            
-            
-        </div>
-    </header>
-    <main>
-        <!-- Here starts the hero section of the website -->
-        <secttion >
-            <div class="container">
-                <div class="alpha">
-                    <h1 class="heading1">Biuld High-Performance
-                        websites with me that will convert visitors into customers
-                    </h1>
-                    <p class="description">I am a web developer with a passion for creating high-performance
-                        websites that not only look great but also convert visitors into customers. Let's work
-                        together to build something amazing!</p>
-                        <a class="btn_link" href="./others/contact.html">
-                            <button class="get-ready">Let's get Started →</button>
-                        </a> 
-                    </div>
-                <model-viewer class="model" src="./media/twelve_the_robot_low_poly.glb" alt="My 3D Model" autoplay autoplay
->              
-                </model-viewer>
-            </div>
-        </secttion>
-            <!-- This is the technolgy section which is immediatly after hero section-->
-            <section > 
-                <h1 class="tech_heading">Languages</h1>
-                <div class="lang1">
-                    <i class="fa-brands fa-html5" style="color: #b10f0f;"> HTML</i>
-                    <i class="fa-brands fa-css3" style="color: #74C0FC;"> CSS</i>
-                    <i class="fa-brands fa-js" style="color: #f5cc37;" > JavaScript</i>
-                </div>
-                <div class="lang2"><i class="fa-brands fa-react" style="color: rgb(3, 75, 122);"> React Js</i>
-                    <i class="fa-brands fa-node" style="color: rgb(0, 72, 0);"> Node JS</i>
-                    <p style="color: white;"><img src="./media/MongoDB.png" alt="img" style="height: 4rem;">MongoDB</p>
-                </div> 
-                <div class="lang3">
-                    <p style="color: rgb(50, 111, 168);"><img src="./media/MySQL.png" alt="img" style="height: 4rem;">MySQL</p>
-                </div>
-            </section>
-            <!-- here starts the project section -->
-                <section class="Myprojects" >
-                    <h1 class="Projects">Projects<img src="./media/man_15258650.png" alt="Img" height="80px"> </h1>
-                    <!-- cards section the main container-->
-                     <div class="cards_container">
 
-                         <div class="cards">
-                             <!-- card # 01 topic: Amzone clone -->
-                        <div class="card">
-                            <img class="project_img" src="./Projects/Amazon clone/preview.png" alt="img">
-                            <div class="details">
-                                <h2 class="card_heading">Amazon clone</h2> 
-                                <p class="des">clone of world's biggest e-commerce store</p>
-                                <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/Amazon clone/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                        <!-- card # 02 topic: To-Do App -->
-                        <div class="card">
-                              <img class="project_img" src="./Projects/To Do List/to do list preview.png" alt="img">
-                              <div class="details">
-                                <h2 class="card_heading">To Do List</h2> 
-                                <p class="des">A simple To do App</p>
-                               <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/To Do List/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                        <!-- card # 03 Fact generator -->
-                        <div class="card">
-                              <img class="project_img" src="./Projects/Fun fact generator/preview.png" alt="img">
-                              <div class="details">
-                                <h2 class="card_heading">Fun Fact Generator</h2> 
-                                <p class="des">A Fact Generator using API</p>
-                               <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/Fun fact generator/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                         <!-- card # 04 topic: Digital clock -->
-                         <div class="card">
-                            <img class="project_img" src="./Projects/digital clock/pre.png" alt="img">
-                             <div class="details">
-                                <h2 class="card_heading">Digital clock & timmer</h2> 
-                                <p class="des">A digital web clock</p>
-                                <div class="tech">
-                                    <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/digital clock/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                         <!-- card # 05 topic: Calculator -->
-                        <div class="card">
-                                  <img class="project_img" src="./Projects/calculator/prev.png" alt="img">
-                                     <div class="details">
-                                <h2 class="card_heading">Calculator</h2> 
-                               <p class="des">A calculator app with all modern features</p>
-                               <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                                </div>
-                                <a class="link" href="Projects/calculator/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                        <!-- card # 06 topic:Weather app -->
-                        <div class="card">
-                             <img class="project_img" src="./Projects/calculator/pre" alt="img">
-                            <div class="details">
-                                <h2 class="card_heading">Weather App</h2> 
-                                <p class="des">Weather app for web</p>
-                                <div class="tech">
-                                   <p class="html">Html <i class="fa-brands fa-html5" style="color: #c70000;background-color:rgb(127, 0, 0)"></i></p>
-                                   <p class="css">CSS<i class="fa-brands fa-css3" style="color: #74C0FC;background: rgb(5, 91, 133);"></i></p>
-                                   <p class="JS">JavaScript <i class="fa-brands fa-js" style="color: #947401;background: rgb(209, 203, 21);"></i></p>
-                               </div>
-                               <a class="link" href="Projects/weather app/index.html">check it ➡️</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Matrix rain canvas background -->
+  <canvas id="matrixCanvas"></canvas>
 
-                </section>
-    </main>
-    <footer>
-        <div class="footer-content"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 
-            <div class="social">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="linkdin"><i class="fa-brands fa-square-linkedin" style="background-color: black;"></i></a>
-            </div>
-            <p class="copy">&copy; Codify All rights reserved. Since 2023</p>
+  <!-- ══════════════════════════════════ NAVBAR ══════════════════════════════════ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-bracket">&lt;</span>Codify<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="./others/resume.html" class="nav-link">Resume</a></li>
+        <li><a href="./others/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
+        target="_blank" class="btn-email">
+        <i class="fa-solid fa-envelope"></i> Email Me
+      </a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+      <ul>
+        <li><a href="#hero" class="mob-link">Home</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="./others/resume.html" class="mob-link">Resume</a></li>
+        <li><a href="./others/contact.html" class="mob-link">Contact</a></li>
+        <li>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
+            target="_blank" class="mob-link email-mob">Email Me</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-container">
+
+        <div class="hero-text reveal">
+          <!-- <p class="hero-eyebrow"><span class="green-dot"></span> Available for work</p> -->
+          <h1 class="hero-heading">
+            Build <span class="highlight">High-Performance</span><br />
+            Websites that convert<br />
+            <span class="highlight">visitors into customers</span>
+          </h1>
+          <p class="hero-desc">
+            I'm a web developer with a passion for crafting fast, beautiful,
+            and conversion-focused websites. Let's build something amazing together.
+          </p>
+          <div class="hero-cta">
+            <a href="./others/contact.html" class="btn-primary">Let's Get Started <span>→</span></a>
+            <a href="#projects" class="btn-ghost">View Projects</a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Coding</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Dedication</span></div>
+          </div>
         </div>
-            </footer>
+
+        <!-- 3D Robot — preserved exactly as requested -->
+        <div class="hero-model reveal-right">
+          <model-viewer
+            class="model"
+            src="./media/twelve_the_robot_low_poly.glb"
+            alt="3D Robot"
+            autoplay
+            auto-rotate
+            camera-controls
+            shadow-intensity="0.5">
+          </model-viewer>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ LANGUAGES ══════════════════════════════════ -->
+    <section id="languages">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Languages &amp; Tools</h2>
+        </div>
+
+        <div class="tech-grid reveal">
+          <div class="tech-card">
+            <i class="fa-brands fa-html5 tech-icon html-color"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="tech-card">
+            <i class="fa-brands fa-css3 tech-icon css-color"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="tech-card">
+            <i class="fa-brands fa-js tech-icon js-color"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-card">
+            <i class="fa-brands fa-react tech-icon react-color"></i>
+            <span>React JS</span>
+          </div>
+          <div class="tech-card">
+            <i class="fa-brands fa-node tech-icon node-color"></i>
+            <span>Node JS</span>
+          </div>
+          <div class="tech-card">
+            <img src="./media/MongoDB.png" alt="MongoDB" class="tech-img" />
+            <span>MongoDB</span>
+          </div>
+          <div class="tech-card">
+            <img src="./media/MySQL.png" alt="MySQL" class="tech-img" />
+            <span>MySQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ PROJECTS ══════════════════════════════════ -->
+    <section id="projects">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Projects <span class="green-accent">_</span></h2>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- Card 1 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/Amazon clone/preview.png" alt="Amazon Clone" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/Amazon clone/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Amazon Clone</h3>
+              <p class="card-desc">Clone of the world's biggest e-commerce store</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/To Do List/to do list preview.png" alt="To Do List" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/To Do List/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">To Do List</h3>
+              <p class="card-desc">A clean task management app</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/Fun fact generator/preview.png" alt="Fact Generator" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/Fun fact generator/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Fun Fact Generator</h3>
+              <p class="card-desc">API-powered random fact generator</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/digital clock/pre.png" alt="Digital Clock" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/digital clock/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Digital Clock &amp; Timer</h3>
+              <p class="card-desc">A sleek real-time digital clock</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/calculator/prev.png" alt="Calculator" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/calculator/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Calculator</h3>
+              <p class="card-desc">Full-featured calculator with modern UI</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card reveal">
+            <div class="card-img-wrap">
+              <img src="./Projects/weather app/preview.png" alt="Weather App" class="card-img" />
+              <div class="card-overlay">
+                <a href="Projects/weather app/index.html" class="overlay-btn">View Project →</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Weather App</h3>
+              <p class="card-desc">Real-time weather data for any city</p>
+              <div class="card-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════ FOOTER ══════════════════════════════════ -->
+  <footer>
+    <div class="footer-container">
+      <a href="index.html" class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Codify<span class="logo-bracket">/&gt;</span>
+      </a>
+      <p class="footer-tagline">Building the web, one pixel at a time.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+          target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mzawar505@gmail.com&su=Work%20Inquiry&body=Hi,%20I%20want%20to%20discuss%20a%20project."
+          target="_blank" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2023–2026 Codify. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
-
-</html> 
+</html>
