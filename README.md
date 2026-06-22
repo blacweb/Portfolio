@@ -177,7 +177,7 @@ All colors are CSS custom properties in `Style.css` under `:root`. Edit `--purpl
 |----------|------|
 | Email    | [mzawar505@gmail.com](mailto:mzawar505@gmail.com) |
 | LinkedIn | [linkedin.com/in/your-profile](https://www.linkedin.com/public-profile/settings) |
-| Portfolio | [your-portfolio-url.com](https://your-portfolio-url.com) |
+| Portfolio | [your-portfolio-url.com](https://blacweb/github.io/Portfolio) |
 
 ---
 
