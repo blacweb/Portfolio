@@ -717,3 +717,24 @@ footer {
   }
   #matrixCanvas { display: none; }
 }
+/* MERN Project Tags */
+
+.tag-react {
+  background: #61dafb;
+  color: #000;
+}
+
+.tag-node {
+  background: #68a063;
+  color: #fff;
+}
+
+.tag-express {
+  background: #222;
+  color: #fff;
+}
+
+.tag-mongo {
+  background: #47a248;
+  color: #fff;
+}

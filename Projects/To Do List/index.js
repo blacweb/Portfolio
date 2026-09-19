@@ -1,179 +1,279 @@
-const date = document.querySelector(".date");
-const day = document.querySelector(".day");
-const dates = new Date();
-const get_days = dates.getDay();
-switch (get_days) {
-  case 1:
-    day.innerHTML = "Monday";
-    break;
-  case 2:
-    day.innerHTML = "Tuesday";
-    break;
-  case 3:
-    day.innerHTML = "Wednesday";
-    break;
-  case 4:
-    day.innerHTML = "Thursday";
-    break;
-  case 5:
-    day.innerHTML = "Friday";
-    break;
-  case 6:
-    day.innerHTML = "Saturday";
-    break;
-  case 7:
-    day.innerHTML = "Sunday";
-    break;
-}
-const get_date = dates.getDate();
-date.innerHTML = get_date.toString().padStart(2, 0);
-const months = document.querySelector(".month");
-const get_month = dates.getMonth();
-// months.innerHTML = getMonth;
-switch (get_month) {
-  case 0:
-    months.innerHTML = "Jan";
-    break;
-  case 1:
-    months.innerHTML = "Fab";
-    break;
-  case 2:
-    months.innerHTML = "March";
-    break;
-  case 3:
-    months.innerHTML = "April";
-    break;
-  case 4:
-    months.innerHTML = "May";
-    break;
-  case 5:
-    months.innerHTML = "June";
-    break;
-  case 6:
-    months.innerHTML = "July";
-    break;
-  case 7:
-    months.innerHTML = "Aug";
-    break;
-  case 8:
-    months.innerHTML = "Setp";
-    break;
-  case 9:
-    months.innerHTML = "Oct";
-    break;
-  case 10:
-    months.innerHTML = "Nov";
-    break;
-  case 11:
-    months.innerHTML = "Dec";
-    break;
-}
-let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
+const todoForm = document.getElementById("todo-form");
+const todoInput = document.getElementById("todo-input");
+const todoList = document.getElementById("todo-list");
+const taskCount = document.getElementById("task-count");
+const clearCompletedButton = document.getElementById("clear-completed");
+const filterButtons = document.querySelectorAll(".filter-btn");
 
-function saveTasks() {
-  localStorage.setItem("tasks", JSON.stringify(taskList));
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
+let currentFilter = "all";
+
+// Save todos to localStorage
+function saveTodos() {
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-function createTaskAndStore() {
-  Creat(); // this creates task in UI
+// Render todos
+function renderTodos() {
+  todoList.innerHTML = "";
 
-  // Get the latest input values
-  const reads = document.querySelectorAll(".read");
-  const dates = document.querySelectorAll(".dates");
+  const filteredTodos = todos.filter((todo) => {
+    if (currentFilter === "active") {
+      return !todo.completed;
+    }
 
-  const lastText = reads[reads.length - 1].value;
-  const lastDate = dates[dates.length - 1].value;
+    if (currentFilter === "completed") {
+      return todo.completed;
+    }
 
-  taskList.push({
-    text: lastText,
-    due: lastDate,
-    completed: false
+    return true;
   });
-  saveTasks();
+
+  if (filteredTodos.length === 0) {
+    const emptyMessage = document.createElement("p");
+
+    emptyMessage.className = "empty-message";
+    emptyMessage.textContent = "No tasks here.";
+
+    todoList.appendChild(emptyMessage);
+  }
+
+  filteredTodos.forEach((todo) => {
+    const todoItem = document.createElement("div");
+
+    todoItem.className = `todo-item ${
+      todo.completed ? "completed" : ""
+    }`;
+
+    todoItem.innerHTML = `
+      <div class="todo-left">
+
+        <input
+          type="checkbox"
+          class="todo-checkbox"
+          ${todo.completed ? "checked" : ""}
+        />
+
+        <span class="todo-title">
+          ${escapeHtml(todo.title)}
+        </span>
+
+      </div>
+
+      <div class="todo-actions">
+
+        <button class="edit-btn">
+          Edit
+        </button>
+
+        <button class="delete-btn">
+          Delete
+        </button>
+
+      </div>
+    `;
+
+    const checkbox = todoItem.querySelector(".todo-checkbox");
+    const editButton = todoItem.querySelector(".edit-btn");
+    const deleteButton = todoItem.querySelector(".delete-btn");
+
+    // Toggle completed
+    checkbox.addEventListener("change", () => {
+      toggleTodo(todo.id);
+    });
+
+    // Edit todo
+    editButton.addEventListener("click", () => {
+      editTodo(todo.id);
+    });
+
+    // Delete todo
+    deleteButton.addEventListener("click", () => {
+      deleteTodo(todo.id);
+    });
+
+    todoList.appendChild(todoItem);
+  });
+
+  updateTaskCount();
 }
 
-function Creat(){
-    const taskbox=document.querySelector(".taskbox");
-    const task=document.createElement("div");
-    const outer=document.createElement("div");
-    const main=document.createElement("div");
-    const series=document.createElement("p");
-    const read=document.createElement("input");
-    const due_date=document.createElement("p");
-    const dates=document.createElement("input");
-    const complete=document.createElement("button");
-    const delet=document.createElement("button");
-    const icon=document.createElement("i");
-    const funcs=document.createElement("div");
+// Add todo
+todoForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
- task.classList.add("task");
- outer.classList.add("outer");
- main.classList.add("main");
- series.classList.add("series");
- read.classList.add("read");
- due_date.classList.add("due_date");
- dates.classList.add("dates");
- complete.classList.add("complete");
- delet.classList.add("delet");
- icon.classList.add("fa-solid" ,"fa-trash");
- funcs.classList.add("funcs");
+  const title = todoInput.value.trim();
 
-series.textContent="➡️";
- read.type="text";
- read.placeholder="What's your plan?";
- read.id="My_input";
- dates.type="date";
-due_date.textContent="Due";
-complete.textContent="Completed ✅";
+  if (!title) {
+    return;
+  }
 
- 
- taskbox.appendChild(task);
- task.appendChild(outer);
- outer.appendChild(main);
- main.appendChild(series);
- main.appendChild(read);
- main.appendChild(delet);
- outer.appendChild(due_date);
- due_date.appendChild(dates);
- outer.appendChild(complete);
- outer.appendChild(funcs);
- delet.appendChild(icon);
- funcs.appendChild(due_date);
- funcs.appendChild(complete);
+  const newTodo = {
+    id: Date.now(),
+    title: title,
+    completed: false,
+  };
 
+  todos.unshift(newTodo);
 
- delet.addEventListener("click",()=> task.style.display="none");
- complete.addEventListener("click",()=>{ const para=document.createElement("h1"); 
-    let text=read.value;
-    para.classList.add("done");
-    para.append(text)
-    main.appendChild(para);
-    read.style.display="none";
-    due_date.style.display="none";
-    series.textContent="✅";
-    complete.style.display="none";
-  
+  saveTodos();
+  renderTodos();
+
+  todoInput.value = "";
+  todoInput.focus();
 });
 
-}
-window.onload = () => {
-  taskList.forEach(task => {
-    Creat(); // create UI
-    const reads = document.querySelectorAll(".read");
-    const dates = document.querySelectorAll(".dates");
+// Toggle todo
+function toggleTodo(id) {
+  todos = todos.map((todo) => {
+    if (todo.id === id) {
+      return {
+        ...todo,
+        completed: !todo.completed,
+      };
+    }
 
-    const lastRead = reads[reads.length - 1];
-    const lastDate = dates[dates.length - 1];
-
-    lastRead.value = task.text;
-    lastDate.value = task.due;
+    return todo;
   });
-};
-function cls(){
-  const close=document.querySelector(".menu_box");
-  close.style.display="none";
+
+  saveTodos();
+  renderTodos();
 }
-function open(){
-    const close=document.querySelector(".menu_box");
-  close.style.display="flex";
+
+// Delete todo
+function deleteTodo(id) {
+  todos = todos.filter((todo) => todo.id !== id);
+
+  saveTodos();
+  renderTodos();
 }
+
+// Edit todo
+function editTodo(id) {
+  const todo = todos.find((todo) => todo.id === id);
+
+  if (!todo) {
+    return;
+  }
+
+  const todoItems = document.querySelectorAll(".todo-item");
+
+  todoItems.forEach((item) => {
+    const titleElement = item.querySelector(".todo-title");
+
+    if (!titleElement) {
+      return;
+    }
+
+    if (titleElement.textContent === todo.title) {
+      const todoLeft = item.querySelector(".todo-left");
+      const actions = item.querySelector(".todo-actions");
+
+      const input = document.createElement("input");
+
+      input.className = "edit-input";
+      input.value = todo.title;
+      input.autocomplete = "off";
+
+      todoLeft.replaceChild(input, titleElement);
+
+      actions.innerHTML = `
+        <button class="save-btn">
+          Save
+        </button>
+
+        <button class="delete-btn">
+          Delete
+        </button>
+      `;
+
+      const saveButton = actions.querySelector(".save-btn");
+      const deleteButton = actions.querySelector(".delete-btn");
+
+      input.focus();
+      input.select();
+
+      saveButton.addEventListener("click", () => {
+        saveEdit(id, input.value);
+      });
+
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          saveEdit(id, input.value);
+        }
+      });
+
+      deleteButton.addEventListener("click", () => {
+        deleteTodo(id);
+      });
+    }
+  });
+}
+
+// Save edited todo
+function saveEdit(id, newTitle) {
+  const title = newTitle.trim();
+
+  if (!title) {
+    return;
+  }
+
+  todos = todos.map((todo) => {
+    if (todo.id === id) {
+      return {
+        ...todo,
+        title: title,
+      };
+    }
+
+    return todo;
+  });
+
+  saveTodos();
+  renderTodos();
+}
+
+// Clear completed
+clearCompletedButton.addEventListener("click", () => {
+  todos = todos.filter((todo) => !todo.completed);
+
+  saveTodos();
+  renderTodos();
+});
+
+// Filter buttons
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    currentFilter = button.dataset.filter;
+
+    filterButtons.forEach((button) => {
+      button.classList.remove("active-filter");
+    });
+
+    button.classList.add("active-filter");
+
+    renderTodos();
+  });
+});
+
+// Update remaining task count
+function updateTaskCount() {
+  const remaining = todos.filter(
+    (todo) => !todo.completed
+  ).length;
+
+  taskCount.textContent =
+    `${remaining} ${remaining === 1 ? "task" : "tasks"} remaining`;
+}
+
+// Prevent HTML injection
+function escapeHtml(text) {
+  const div = document.createElement("div");
+
+  div.textContent = text;
+
+  return div.innerHTML;
+}
+
+// Initial render
+renderTodos();
