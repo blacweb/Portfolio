@@ -1,43 +1,78 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact | Codify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/contact.css">
     <script defer src="/JS files/contact.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <canvas id="rain" aria-hidden="true"></canvas>
     <header>
         <div class="alpha">
-            <p class="notice"><i class="fa-solid fa-circle-exclamation" style=" color: rgba(254, 14, 14, 0.784);" ></i> Your inquery will be answered within 24 hours!</p>
+            <p class="notice" role="status"><i class="fa-solid fa-circle-exclamation"></i> Your inquiry will be answered within 24 hours.</p>
         </div>
     </header>
     <main>
         <section>
             <div class="page">
                 <div class="form">
-                    <div class="info">
-                        <label class="input_label" for="Name">Your Name</label>
-                        <input class="input_box" type="text" placeholder="Your name" name="Name">
-                        <label class="input_label"  for="Project">Project Type</label>
-                        <input class="input_box" type="text" placeholder="Your Project Type" name="project">
-                        <label class="input_label"  for="email">E-mail</label>
-                        <input class="input_box" id="email" type="email" placeholder="you email" name="email">
-                        <label class="input_label"  for="Sec_contact">Other Contact</label>
-                        <input class="input_box" type="text" placeholder="(Optional)" name="Sec_contact">
-                        <label class="input_label"  for="Sec_contact">Budget</label>
-                        <input class="input_box" type="number" placeholder="Enter amount in usd" name="Sec_contact">
+                    <div class="form-head">
+                        <h1>Let's build <span>something amazing together</span></h1>
+                        <p>Tell me about your project and I'll reply with next steps.</p>
                     </div>
-                    <p class="error">
-                    </p>
-                    <button class="Submit" onclick="send()">Send</button>
+                    <div class="info">
+                        <div class="field">
+                            <label class="input_label" for="Name">Your name</label>
+                            <input class="input_box" id="Name" type="text" placeholder="Jane Doe" name="Name" autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label class="input_label" for="Project">Project type</label>
+                            <input class="input_box" id="Project" type="text" placeholder="Website, web app, portfolio..." name="project">
+                        </div>
+                        <div class="field">
+                            <label class="input_label" for="email">Email</label>
+                            <input class="input_box" id="email" type="email" placeholder="you@example.com" name="email" autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label class="input_label" for="Sec_contact">Other contact (optional)</label>
+                            <input class="input_box" id="Sec_contact" type="text" placeholder="Phone, Telegram, WhatsApp..." name="Sec_contact">
+                        </div>
+                        <div class="field full">
+                            <label class="input_label" for="budget">Budget (USD)</label>
+                            <input class="input_box" id="budget" type="number" min="0" placeholder="Enter amount in USD" name="budget">
+                        </div>
+                    </div>
+                    <p class="error" role="alert"></p>
+                    <button class="Submit" type="button" onclick="send()">Send message</button>
                     <p class="sent"></p>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+    // Matrix-style code rain background (drawn once if the visitor prefers reduced motion)
+    (() => {
+      const c = document.getElementById('rain'), x = c.getContext('2d');
+      const chars = 'ｱｲｳｴｵｶｷｸｹｺ0123456789{}[]<>/;=+*'.split(''), size = 16;
+      let drops = [];
+      const fit = () => { c.width = innerWidth; c.height = innerHeight; drops = Array.from({ length: Math.ceil(c.width / size) }, () => Math.random() * -50); };
+      const draw = () => {
+        x.fillStyle = 'rgba(8,6,13,.12)'; x.fillRect(0, 0, c.width, c.height);
+        x.fillStyle = '#22e55c'; x.font = size + 'px monospace';
+        drops.forEach((y, i) => {
+          x.fillText(chars[Math.floor(Math.random() * chars.length)], i * size, y * size);
+          drops[i] = y * size > c.height && Math.random() > .975 ? 0 : y + 1;
+        });
+      };
+      fit(); addEventListener('resize', fit);
+      if (matchMedia('(prefers-reduced-motion:reduce)').matches) { for (let i = 0; i < 40; i++) draw(); } else setInterval(draw, 60);
+    })();
+    </script>
 </body>
-</html> 
-
+</html>
